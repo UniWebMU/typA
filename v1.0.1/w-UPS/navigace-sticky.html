@@ -1,0 +1,549 @@
+<!doctype html>
+<html class="no-js" lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+      
+    <title>Jednotná univerzitní webová prezentace MU | &#35;uniweb</title>
+      
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="../uniweb-v1/css/font-awesome.min.css" />
+      
+    <script src="../uniweb-v1/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  
+  <body>
+  <!--[if gte IE 9]>
+	  <style type="text/css">
+	    .top-header	 {
+	       filter: none;
+	    }
+	  </style>
+  <![endif]-->
+  	<div class="row-wide  above-header-bar">
+  		<div class="row solid">
+		  <div class="medium-7  columns  hide-for-small-only">
+	  	    <span class="mu-tag"><a href="http://www.muni.cz">Masarykova univerzita</a></span>
+		  </div>
+		  <div class="medium-5  columns  hide-for-small-only  text-right">
+	  		<span><a href="#">Přihlášení</a></span>
+	  		<span><a href="#" data-dropdown="language-choice" data-options="is_hover:true">čeština<img src="images/flags/CzechRepublic.png"></a></span>
+            <ul id="language-choice" class="f-dropdown" data-dropdown-content>
+              <li><a href="#">English<img src="images/flags/UnitedKingdom.png"></a></li>
+            </ul>
+		  </div>
+  		</div>
+    </div>
+    
+  	<div class="row-wide  top-header">
+	  	<div class="row identity-row">
+	      <div class="large-10  medium-9  columns">
+	        <a href="http://www.muni.cz" class="faculty-tag"></a>
+            <a class="logo-top-header">&nbsp;</a>
+            <a class="faculty-tag-text"><strong>Jednotná univerzitní webová prezentace MU</strong><br />uniweb</a>
+	      </div>
+	      <div class="large-2  medium-3  columns  hide-for-small-only">
+            <div class="row additional-menu">
+              <div class="columns">
+                <a href="#"><i class="fa fa-facebook-official"></i></a>
+              </div>
+            </div>
+            <div class="row collapse search-row">
+              <div class="small-9 columns">
+                <input type="text" placeholder="Hledej" />
+              </div>
+              <div class="small-3 columns">
+                <input class="button postfix" type="submit" value="" />
+              </div>
+            </div>
+	      </div>
+	    </div>
+        <div class="row  small-wide">
+	    	<div class="columns">
+              <div id="prim-top-bar-cont" class="contain-to-grid sticky">
+                <nav id="prim-top-bar" class="top-bar" data-topbar role="navigation" data-options="sticky_on: [medium, large]"> 
+                  <ul class="title-area"> 
+                    <li class="name"></li>
+                    <li class="toggle-topbar  menu-icon"><a href="#"><span></span></a></li> 
+                  </ul> 
+                    
+                  <section class="top-bar-section"> 
+                    <ul> 
+                      <li class="has-form  show-for-small-only">
+                        <div class="row  collapse search-row">
+                          <div class="small-11  columns">
+                            <input type="text" placeholder="Hledat" />
+                          </div>
+                          <div class="small-1  columns">
+                            <input class="button postfix" type="submit" value="" />
+                          </div>
+                        </div>
+                      </li>
+                      <li class="has-dropdown  show-for-small-only">
+                        <a  class="language-choice"><img src="images/flags/CzechRepublic.png">Čeština</a>
+                        <ul class="dropdown">
+                          <li class="active"><a href="#"  class="language-choice"><img src="images/flags/CzechRepublic.png">Čeština</a></li>
+                          <li><a href="#"  class="language-choice"><img src="images/flags/Germany.png">Deutsch</a></li>
+                          <li><a href="#"  class="language-choice"><img src="images/flags/UnitedKingdom.png">English</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="index.html"><span>Úvod</span></a>
+                      </li>
+                      <li class="has-dropdown">
+                        <a href="typografie.html"><span>Typografie</span></a>
+                        <ul class="dropdown">
+                          <li><a href="#">Tiskové zprávy</a></li>
+                          <li><a href="#">Archiv TZ</a></li>
+                          <li><a href="#">FSS v číslech</a></li>
+                          <li><a href="#">Fotobanka</a></li>
+                          <li><a href="#">Kontakty pro média</a></li>
+                          <li><a href="#">Databáze expertů</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="paticka.html"><span>Krátká patička</span></a>
+                      </li>
+                      <li>
+                        <a href="paticka2.html"><span>Patička mini</span></a>
+                      </li>
+                      <li class="active">
+                        <a href="navigace-sticky.html"><span>Sticky navigace</span></a>
+                      </li>
+                      <li>
+                        <a href="moduly.html"><span>Moduly</span></a>
+                      </li>
+                      <li>
+                        <p><span>Ukázka statického textu</span></p>
+                      </li>
+                    </ul> 
+                  </section> 
+                </nav>
+              </div>
+            </div>
+	    </div>
+	</div>
+      
+    <div class="row">
+	    <div class="columns text-right">
+            <ul class="breadcrumbs">
+              <li><a href="index.html">Úvod</a></li>
+              <li class="current"><a href="navigace-sticky.html">Sticky navigace</a></li>
+            </ul>
+	    </div>
+	</div>
+    
+	<div class="row">
+	    <div class="columns">
+            <h1 data-magellan-destination="texty">Nadpis H1 na začátku stránky <small>ukázka textových elementů</small></h1><a name="texty"></a>
+	    </div>
+	</div>
+      
+    <div id="sec-top-bar-placeholder"></div>
+      
+    <div id="sec-top-bar-wrapper" class="row  small-wide">
+      <div class="columns">
+        <div id="sec-top-bar-cont" class="contain-to-grid-main sticky-sec top-one-row">
+          <nav id="sec-top-bar" class="main-bar" data-mainbar role="navigation"> 
+            <ul class="title-area"> 
+              <li class="name"></li>
+              <li class="toggle-mainbar  menu-icon"><a href="#"><span></span></a></li> 
+            </ul> 
+            <section class="main-bar-section"> 
+                <ul> 
+                    <li class="has-form  hide-for-small-up">
+                        <div class="row">
+                            <div class="small-9  columns">
+                                <div class="row  collapse">
+                                    <div class="small-10  columns">
+                                        <input type="text" placeholder="Hledat" />
+                                    </div>
+                                    <div class="small-2  columns">
+                                        <a href="#" class="button  tiny  postfix"><i class="fa  fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="small-3  columns">
+                                <a class="button  tiny  language"><img src="images/flag-czech.png"/></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="index.html"><span>Úvod</span></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Úřední deska</a></li>
+                            <li><a href="#">Aktuality</a></li>
+                            <li><a href="#">Předpisy, normy a zákony</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="typografie.html"><span>O&nbsp;fakultě</span></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Vedení fakulty</a></li>
+                            <li><a href="#">Orgány fakulty</a></li>
+                            <li><a href="#">Lidé na&nbsp;fakultě</a></li>
+                            <li><a href="#">Prezentace fakulty</a></li>
+                            <li><a href="#">Historie a současnost</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="osoba.html"><span>Zájemci o&nbsp;studium</span></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Přijímací řízení</a></li>
+                            <li><a href="#">F&amp;Q</a></li>
+                            <li><a href="#">Studim jinak</a></li>
+                            <li><a href="#">Studium v zahraničí</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="druha-uroven.html"><span>Studium</span></a>
+                        <ul class="dropdown">
+                            <li>
+                                <a href="#">Bakalářské studium</a>
+                            </li>
+                            <li>
+                                <a href="#">Magisterské studium</a>
+                            </li>
+                            <li>
+                                <a href="#">Doktorské studium</a>
+                            </li>
+                            <li>
+                                <a href="#">Studijní obory</a>
+                            </li>
+                            <li><a href="#">Přijímací řízení</a></li>
+                            <li><a href="#">Den otevřených dveří</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="moduly.html"><span>Věda a&nbsp;výzkum</span></a>
+                        <ul class="dropdown  right">
+                            <li><a href="#">Oddělení pro vědu a výzkum</a></li>
+                            <li><a href="#">Výzkumná činnost</a></li>
+                            <li><a href="#">Publikační činnost</a></li>
+                            <li><a href="#">Výzkumná pracoviště</a></li>
+                            <li><a href="#">Klíčová výzkumná témata</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a><span>Zahraniční spolupráce</span></a>
+                        <ul class="dropdown  right">
+                            <li><a href="#">Oddělení zahraničních vztahů</a></li>
+                            <li><a href="#">Aktuální nabídky</a></li>
+                            <li><a href="#">Letní školy</a></li>
+                            <li><a href="#">Studijní programy v zahraničí</a></li>
+                            <li><a href="#">Informace pro zahraniční studenty</a></li>
+                            <li><a href="#">Zahraniční vyučující a výzkumníci</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a><span>Média</span></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a><span>Kontakty</span></a>
+                        <ul class="dropdown  right">
+                            <li><a href="#">Zaměstnanci</a></li>
+                            <li><a href="#">Kontakty pro média</a></li>
+                            <li><a href="#">Studijní oddělení</a></li>
+                        </ul>
+                    </li>
+                </ul> 
+            </section> 
+          </nav>
+        </div>
+      </div>
+    </div>
+        
+        <div class="row">
+            <div class="large-3  medium-6  columns">
+	      	  <a class="module r16x9  bottom has-gradient inverse">
+				<div class="inner">
+				  <img src="res/images/test-image.png"/>
+				    <div class="content">
+				    <div class="bgrd-over">
+				      <div class="text-content">
+				        <h3>r8x3</h3>
+				      </div>
+				    </div>
+				    </div>
+				</div>
+			  </a>
+	      	</div>
+            
+            <div class="large-3  medium-6  columns">
+	      	  <a class="module r16x9 bottom has-gradient inverse">
+				<div class="inner">
+				  <img src="res/images/test-image.png"/>
+				    <div class="content">
+				    <div class="bgrd-over">
+				      <div class="text-content">
+				        <h3>r16x3</h3>
+				      </div>
+				    </div>
+				    </div>
+				</div>
+			  </a>
+	      	</div>
+              
+            <div class="large-3  medium-6  columns">
+	      	  <a class="module r16x9 bottom has-gradient inverse">
+				<div class="inner">
+				  <img src="res/images/test-image.png"/>
+				    <div class="content">
+				    <div class="bgrd-over">
+				      <div class="text-content">
+				        <h3>r16x3</h3>
+				      </div>
+				    </div>
+				    </div>
+				</div>
+			  </a>
+	      	</div>
+              
+            <div class="large-3  medium-6  columns">
+	      	  <a class="module r16x9 bottom has-gradient inverse">
+				<div class="inner">
+				  <img src="res/images/test-image.png"/>
+				    <div class="content">
+				    <div class="bgrd-over">
+				      <div class="text-content">
+				        <h3>r16x3</h3>
+				      </div>
+				    </div>
+				    </div>
+				</div>
+			  </a>
+	      	</div>
+	    </div>
+      
+      <div class="row">
+            <div class="medium-6  columns">
+	      	  <a class="module r8x3  bottom has-gradient inverse">
+				<div class="inner">
+				  <img src="res/images/test-image.png"/>
+				    <div class="content">
+				    <div class="bgrd-over">
+				      <div class="text-content">
+				        <h3>r8x3</h3>
+				      </div>
+				    </div>
+				    </div>
+				</div>
+			  </a>
+	      	</div>
+            
+            <div class="medium-6  columns">
+	      	  <a class="module r8x3 bottom has-gradient inverse">
+				<div class="inner">
+				  <img src="res/images/test-image.png"/>
+				    <div class="content">
+				    <div class="bgrd-over">
+				      <div class="text-content">
+				        <h3>r16x3</h3>
+				      </div>
+				    </div>
+				    </div>
+				</div>
+			  </a>
+	      	</div>
+	   </div>
+      
+       <div class="row">
+            <div class="medium-6  columns">
+	      	  <a class="module r8x3  bottom has-gradient inverse">
+				<div class="inner">
+				  <img src="res/images/test-image.png"/>
+				    <div class="content">
+				    <div class="bgrd-over">
+				      <div class="text-content">
+				        <h3>r8x3</h3>
+				      </div>
+				    </div>
+				    </div>
+				</div>
+			  </a>
+	      	</div>
+            
+            <div class="medium-6  columns">
+	      	  <a class="module r8x3 bottom has-gradient inverse">
+				<div class="inner">
+				  <img src="res/images/test-image.png"/>
+				    <div class="content">
+				    <div class="bgrd-over">
+				      <div class="text-content">
+				        <h3>r16x3</h3>
+				      </div>
+				    </div>
+				    </div>
+				</div>
+			  </a>
+	      	</div>
+	   </div>
+      
+      <div class="row">
+            <div class="medium-6  columns">
+	      	  <a class="module r8x3  bottom has-gradient inverse">
+				<div class="inner">
+				  <img src="res/images/test-image.png"/>
+				    <div class="content">
+				    <div class="bgrd-over">
+				      <div class="text-content">
+				        <h3>r8x3</h3>
+				      </div>
+				    </div>
+				    </div>
+				</div>
+			  </a>
+	      	</div>
+            
+            <div class="medium-6  columns">
+	      	  <a class="module r8x3 bottom has-gradient inverse">
+				<div class="inner">
+				  <img src="res/images/test-image.png"/>
+				    <div class="content">
+				    <div class="bgrd-over">
+				      <div class="text-content">
+				        <h3>r16x3</h3>
+				      </div>
+				    </div>
+				    </div>
+				</div>
+			  </a>
+	      	</div>
+	   </div>
+  
+	<div class="row-wide  footer-upper">
+      <div class="row">
+        <div class="large-3  medium-6  columns  show-for-large-up">
+          <ul>
+            <li><a>Úvodní strana</a></li>
+            <li><a>Zájemci o studium</a></li>
+            <li><a>Studium</a></li>
+            <li><a>Věda a výzkum</a></li>
+            <li><a>Zahraniční spolupráce</a></li>
+            <li><a>Pro média</a></li>
+          </ul>
+        </div>
+        <div class="large-3  medium-6  columns  show-for-large-up">
+          <ul>
+            <li><a>Úřední deska</a></li>
+            <li><a>Harmonogram semestru</a></li>
+            <li><a>Dokumenty ke stažení</a></li>
+            <li><a>Mobilita studentů</a></li>
+            <li><a>Stipendijní programy</a></li>
+            <li><a>Mapy pracovišť</a></li>
+          </ul>
+        </div>
+        <div class="large-3  medium-6  columns">
+          <div class="panel  radius  contact-panel">
+            <div class="logo footer-logo">&nbsp;</div>
+            <h2>Kontakt</h2>
+            <p>	
+              Masarykova univerzita<br />
+              Ústav<br />
+              Ulice XX/X<br />
+              XXX XX&nbsp;&bull;&nbsp;Brno<br />
+              Česká republika<br />
+            </p>
+          </div>
+        </div>
+        <div class="large-3  medium-6  columns">
+          <div class="panel  footer-small  radius  social-networks-footer">
+            <ul>
+              <li class="social-icon-footer"><a class="facebook" title="facebook"><i class="fa  fa-facebook"></i></a></li><li class="social-icon-footer"><a class="twitter" href="#" title="Title"><i class="fa  fa-twitter"></i></a></li><li class="social-icon-footer"><a class="google" href="#" title="Title"><i class="fa  fa-google-plus"></i></a></li><li class="social-icon-footer"><a class="youtube" href="#" title="Title"><i class="fa  fa-youtube"></i></a></li><li class="social-icon-footer"><a class="instagram" href="#" title="Title"><i class="fa  fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="panel  radius  footer-small">
+            <p>	
+              URL: <a href="#">http://www.xxxxx.cz/</a>
+            </p>
+          </div>
+          <div class="panel  radius  footer-small">
+            <p>	
+              Telefon: (+420) XXX XX XXXX
+            </p>
+          </div>
+        </div>
+      </div>
+	</div>
+	<div class="row-wide  footer-lower">
+      <div class="row">
+        <div class="large-6  columns large-push-6">
+          <img src="images/uvt_logotyp_barva.svg" class="logo hide-for-small-only" />
+          <p class="text-left">
+            Webová prezentace Masarykovy univerzity je ve správě Ústavu výpočetní techniky MU
+          </p>
+        </div>
+        <div class="large-6  columns large-pull-6">
+          <p>&copy;&ensp;2016 <a>Masarykova univerzita</a>&ensp;|&ensp;<a>Mapa stránek</a>&ensp;|&ensp;<a>Správce stránky</a>&ensp;|&ensp;<a>Kontakty</a></p>
+        </div>
+      </div>
+	</div>
+
+    <script src="../uniweb-v1/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../uniweb-v1/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../uniweb-v1/js/foundation.mainbar.min.js"></script>
+    <script src="../uniweb-v1/js/app.js"></script>
+    <script src="../uniweb-v1/js/wc-element-query.js"></script>
+    <script>
+    // počká až je dokument ready
+      $(document).ready(function(){  
+        
+        var senseSpeed = 5;
+        var previousScroll = 0;
+        $(window).scroll(function(){
+            
+          if( $("#prim-top-bar-cont").hasClass("fixed") && $("#sec-top-bar-cont").hasClass("fixed") ) {
+            $("#prim-top-bar").addClass("hide-dropdown");
+          } else {
+            $("#prim-top-bar").removeClass("hide-dropdown");
+          }
+                
+          var scroller = $(this).scrollTop();
+                
+          if( $('#prim-top-bar-cont').hasClass("fixed") && $('#sec-top-bar-cont').hasClass("fixed") ){
+            if (scroller-senseSpeed > previousScroll) {
+              $('#prim-top-bar-cont').css( "top", -$("#prim-top-bar-cont").outerHeight(true)-4 );
+              $('#sec-top-bar-cont').css( "top", 0 );
+            } else if (scroller+senseSpeed < previousScroll) {
+              $('#prim-top-bar-cont').css( "top", 0 );
+              $('#sec-top-bar-cont').css( "top", $("#prim-top-bar-cont").outerHeight(true) );
+            }
+          }
+            
+          previousScroll = scroller;
+        });
+            
+        $('.tab-content-switcher').click( function() {
+          $(this).toggleClass('active');
+          var target_element = $('#'+$(this).attr('data-hide-and-seek'));
+          if(target_element.is(':hidden')) {
+            target_element.show();
+          }
+          else {
+            target_element.hide();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
