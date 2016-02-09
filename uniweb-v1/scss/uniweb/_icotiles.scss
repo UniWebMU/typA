@@ -1,0 +1,252 @@
+@import "../core/mixins";
+
+$icotile-radius: $global-radius !default;
+$lightness-hover-factor: -15% !default;
+$icotile-font-color-alt: $body-font-color !default;
+$icotile-font-color: $white !default;
+$icotile-dark-color: $black !default;
+$icotile-inverse-color: $white !default;
+$icotile-icoimg-size: rem-calc(50) !default;
+
+@mixin icotile-base {
+  display: block;
+  height: 150px;
+  margin: 0;
+  margin-bottom: $column-gutter;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+    
+  &:hover, &:focus { text-decoration: none; }
+    
+  & > .fa {
+    font-size: rem-calc(50);
+    left: 0;
+    padding: rem-calc(20 15);
+    position: absolute;
+    text-align: left;
+    top: 0;
+  }
+    
+  & > .icon-img {
+    height: $icotile-icoimg-size;
+    width: $icotile-icoimg-size;
+    margin-top: rem-calc(10);
+    margin-left: rem-calc(10);
+    position: absolute;
+    top: 25%;
+    left: 0;
+    @include translate(0, -50%);
+  }
+  
+  .text {
+    bottom: 0;
+    display: block;
+    padding: rem-calc(15);
+    position: absolute;
+    text-align: left;
+    top: auto;
+      
+    span {
+      display: block;
+      height: auto;
+    }
+      
+    span:first-child {
+      font-family: $font-family-sans-narrow;
+      font-size: rem-calc(22);
+      font-weight: $font-weight-bold;
+      line-height: rem-calc(24);
+      text-transform: uppercase;
+    }
+  }
+    
+  .hover {
+    background: none;
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 300;
+      
+    @include transition(background 0.4s ease);
+  }
+    
+  img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    @include translate(0, -50%);
+  }
+
+    
+  &.eq-small {
+    & > .fa {
+      text-align: center;
+      width: 100%;
+    }
+      
+    & > .icon-img {
+      margin-top: rem-calc(10);
+      margin-left: 0;
+      left: 50%;
+      @include translate(-50%, -50%);
+    }
+      
+    .text {
+      text-align: center;
+      width: 100%;
+        
+      span:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}
+
+@mixin icotile-colors($bg) {
+  $bg-lightness: lightness($bg);
+  color: if($bg-lightness > 70%, $icotile-font-color-alt, $icotile-font-color);
+  background: $bg;
+
+  &:hover, &:focus {
+    color: if($bg-lightness > 70%, $icotile-font-color-alt, $icotile-font-color);
+    background: scale-color($bg, $lightness: $lightness-hover-factor);
+    // třída pro hover nad obrázkem - je tam div prázdný pes celý obrázek, který se obarvuje pro hover efekt. doplnění další třídy .inverse zabarví do světlé barvy - obě barvy definované v settings
+    .hover {
+      background: rgba($icotile-dark-color, 0.4); 
+      &.inverse {
+        background: rgba($icotile-inverse-color, 0.4);
+      }
+    }
+  }
+}
+
+@mixin has-text {
+  & > .fa {
+    float: left;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    width: auto;
+  }
+    
+  & > .icon-img {
+    float: left;
+    height: $icotile-icoimg-size;
+    width: $icotile-icoimg-size;
+    margin: rem-calc(10 15 100 15);
+    position: relative;
+  }
+    
+  .text {
+    bottom: auto;
+    max-height: rem-calc(140);
+    padding: 0;
+    position: relative;
+    top: 0;
+    width: auto;
+      
+    span {
+      overflow: hidden;
+      text-align: left;
+      padding-right: rem-calc(20);
+    }
+      
+    span:first-child {
+      height: rem-calc(48);
+      margin-top: rem-calc(15);
+    }
+
+    span:nth-child(2) {
+      font-size: rem-calc(13);
+      font-family: $font-family-sans-serif;
+      font-weight: $font-weight-normal;
+      line-height: rem-calc(18);
+      max-height: rem-calc(72);
+      position: relative;
+      margin-top: rem-calc(5);
+      text-transform: none;
+      width: auto;
+    }
+  }
+      
+    
+  &.eq-small {
+    & > .fa {
+      height: auto;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
+      
+    .text {
+      bottom: 0;
+      padding: rem-calc(15);
+      position: absolute;
+      top: auto;
+      width: 100%;
+        
+      span:first-child {
+        height: auto;
+        max-height: rem-calc(48);
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+        
+      span:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}
+
+
+@include exports("icotile") {
+  .icotile {
+    @include icotile-base;
+    @include icotile-colors($primary-color);  // Include default colors
+      
+    &.has-text { @include has-text; }
+    &.radius { @include radius($icotile-radius); }
+      
+    &.primary-dark { @include icotile-colors($primary-dark-color); }
+    &.primary-light { @include icotile-colors($primary-light-color); }
+    &.primary-very-light { @include icotile-colors($primary-very-light-color); }
+    &.secondary { @include icotile-colors($secondary-color); }
+    &.gray-dark { @include icotile-colors($gray-dark-color); }
+    &.gray { @include icotile-colors($gray-color); }
+    &.gray-lighter { @include icotile-colors($gray-lighter-color); }
+    &.gray-light { @include icotile-colors($gray-light-color); }
+    &.gray-very-light { @include icotile-colors($gray-very-light-color); }
+    &.white { @include icotile-colors($white); }
+      
+    &.red { @include icotile-colors($firebrick-red-color); }
+    &.orange { @include icotile-colors($alloy-orange-color); }
+    &.yellow { @include icotile-colors($goldenrod-yellow-color); }
+    &.green { @include icotile-colors($avocado-green-color); }
+    &.green2 { @include icotile-colors($myrtle-green-color); }
+    &.blue { @include icotile-colors($blue-color); }
+    &.blue2 { @include icotile-colors($darkblue-color); }
+    &.purple { @include icotile-colors($royal-purple-color); }
+    &.purple2 { @include icotile-colors($pearly-purple-color); }
+      
+    &.facebook { @include icotile-colors($facebook-color); }
+    &.twitter { @include icotile-colors($twitter-color); }
+    &.google { @include icotile-colors($google-color); }
+    &.youtube { @include icotile-colors($youtube-color); }
+    &.linkedin { @include icotile-colors($linkedin-color); }
+    &.instagram { @include icotile-colors($instagram-color); }
+    &.pinterest { @include icotile-colors($pinterest-color); }
+    &.flickr { @include icotile-colors($flickr-color); }
+    &.tumblr { @include icotile-colors($tumblr-color); }
+    &.vimeo { @include icotile-colors($vimeo-color); }
+  }
+}

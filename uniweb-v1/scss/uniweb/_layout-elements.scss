@@ -1,0 +1,66 @@
+@import "../core/mixins";
+
+$carousel-panel-bg: $white !default;
+
+$youknow-panel-bg: $primary-color !default;
+$youknow-panel-header-color: $white !default;
+$youknow-panel-header-font-size: rem-calc(28) !default;
+$youknow-panel-paragraph-color: $white !default;
+$youknow-panel-paragraph-font-size: rem-calc(19) !default;
+
+.carousel-panel {
+  @include panel($bg:$carousel-panel-bg);
+  position: relative;
+  margin-top: rem-calc(10);
+  border: 1px solid scale-color($carousel-panel-bg, $lightness: -10%);
+}
+
+.prezi {
+  @media #{$large-up} {
+    padding-right: 2em;
+  }
+}
+
+.you-know-panel {
+  @include panel($bg:$youknow-panel-bg);
+  position: relative;
+  margin-top: rem-calc(10);
+  border: none;
+    
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    height: 0px;
+    width: 0px;
+    border-right: 18px solid $body-bg;
+    border-bottom: 18px solid scale-color($youknow-panel-bg, $lightness:65%);
+  }
+    
+  h2 {
+    color: $youknow-panel-header-color;
+    font-family: $font-family-serif;
+    font-size: $youknow-panel-header-font-size;
+    font-style: italic;
+    font-weight: $font-weight-normal;
+    letter-spacing: 0.025em;
+    text-transform: none;
+    margin: rem-calc(20 0);
+    
+    @media #{$medium-up} { 
+      font-size: $youknow-panel-header-font-size * 1.25; 
+    }
+  }
+
+  p {
+    color: $youknow-panel-paragraph-color;
+    font-family: $font-family-sans-narrow;
+    font-size: $youknow-panel-paragraph-font-size;
+    letter-spacing: 0.033em;
+    @media #{$medium-up} {
+      font-size: $youknow-panel-paragraph-font-size * 1.111; 
+    }
+  }
+}

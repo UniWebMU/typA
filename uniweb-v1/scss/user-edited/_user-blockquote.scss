@@ -1,0 +1,56 @@
+// Blockquote & Testimonials
+
+blockquote {
+  font-style: italic;
+
+  &:lang(en) {
+    &::before {
+      color: $gray-lighter-color;
+      content: "\201C";
+      display: inline-block;
+      font-size: rem-calc(45);
+      margin-left: rem-calc(-20);
+      margin-right: rem-calc(5);
+      position: relative;
+      top: rem-calc(25);
+    }
+  }
+    
+  &:lang(cs) {
+    &::before {
+      color: $gray-lighter-color;
+      content: "\201E";
+      display: inline-block;
+      font-size: rem-calc(45);
+      margin-left: rem-calc(-15);
+      margin-right: rem-calc(0);
+      position: relative;
+      top: rem-calc(-1);
+    }
+  }
+
+  &.en-lang {
+    &::before {
+      content: "\201C" !important;
+      margin-left: rem-calc(-20);
+      margin-right: rem-calc(5);
+      top: rem-calc(25);
+    }  
+  }
+    
+  &.cs-lang {
+    &::before {
+      content: "\201E" !important;
+      margin-left: rem-calc(-15);
+      margin-right: rem-calc(0);
+      top: rem-calc(-1);
+    }  
+  }
+    
+  cite {
+    font-weight: $font-weight-bold;
+    &::before {
+      content: "";
+    }
+  }
+}

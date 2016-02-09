@@ -1,0 +1,16 @@
+// Magellan Nav
+
+// Magellan využívá Sub Nav - použita doprovodná třída .magellan pro div nad sub-nav
+
+$magellan-border-color: $gray-light-color !default;
+
+.magellan {
+  border-bottom: 1px solid scale-color($magellan-border-color, $lightness: 35%);
+  margin-bottom: $paragraph-margin-bottom;
+  &.fixed {
+    z-index: 9800;
+  }
+  &.top-one-row {
+    top: $topbar-height;
+  }
+}

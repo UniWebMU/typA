@@ -1,0 +1,52 @@
+// h. Simple Nav
+
+@import "../core/mixins";
+
+$simple-nav-font-size: rem-calc(13) !default;
+$simple-nav-link-color: $gray-dark-color !default;
+$simple-nav-link-color-hover: $anchor-font-color-hover !default;
+$simple-nav-link-color-active: $anchor-font-color-hover !default;
+$simple-nav-link-color-active-hover: $primary-color !default;
+
+.simple-nav {
+  position: relative;
+  //margin-bottom: rem-calc(20);  
+  padding: rem-calc(10 0);
+    
+  ul {
+    list-style: none;
+    margin: 0;
+      
+    li {
+      display: inline-block;
+      list-style-image: none;
+        
+      a {
+        font-size: $simple-nav-font-size;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: $font-weight-normal;
+        color: $simple-nav-link-color;
+        padding: rem-calc(0 15);
+        border-right: 1px solid $gray-color;
+        &:hover, &:focus {
+          color: $simple-nav-link-color-hover;
+        }
+      }
+      &:last-child {
+        a {
+          border-right: none;
+        }
+      }
+      &.active {
+        a {
+          color: $simple-nav-link-color-active;
+          font-weight: $font-weight-bold;
+          &:hover, &:focus {
+            color: $simple-nav-link-color-active-hover;
+          }
+        }
+      }
+    }
+  }
+}
