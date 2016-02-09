@@ -1,0 +1,134 @@
+// g. Orbit
+
+.vertical-orbit {
+    .orbit-container {
+        li {
+          list-style-image: none !important;
+        }
+
+      .orbit-slides-container {
+
+        .slide-content {
+          padding: rem-calc(35);
+
+          h3 {
+            font-size: rem-calc(17);
+            font-family: $font-family-sans-serif;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+          }
+          h4 {
+            font-size: rem-calc(15);
+            font-weight: $font-weight-bold;
+          }
+          p {
+            font-weight: $font-weight-normal;
+          }
+        }
+
+        .orbit-caption {
+          padding: rem-calc(10 0);
+          background: transparent;
+          h3 {
+            font-size: rem-calc(15);
+            font-family: $font-family-sans-serif;
+            font-weight: $font-weight-bold;
+            line-height: 1.5em;
+            text-transform: uppercase;
+          }
+          font-size: rem-calc(13);
+        }
+      }
+
+      .orbit-prev, .orbit-next {
+        top: 25%;
+      }
+        
+      .orbit-prev {
+        left: 0;
+        @include translate(0, -30px);
+      }
+    
+      .orbit-next {
+        right: 0;
+        @include translate(0, -30px);
+      }
+
+      .orbit-timer {
+        display: none;
+        visibility: none;
+      }
+    
+      .orbit-bullets {
+        top: 0;
+      }
+        
+  }
+}
+
+.orbit-container {
+        li {
+          list-style-image: none !important;
+        }
+
+      .orbit-prev, .orbit-next, .orbit-timer {
+        background: transparent no-repeat center center;
+        background-size: 21px 42px;
+        height: 50px;
+        margin-top: 0; 
+        top: 40%;
+        width: 30px;
+        z-index: 8000;
+
+        & > span {
+          visibility: hidden;
+          display: none;
+        }
+          
+      }
+    
+      .orbit-prev {
+        left: 15px;
+        @include translate(0, -21px);
+      }
+    
+      .orbit-next {
+        right: 15px;
+        @include translate(0, -21px);
+      }
+
+      .orbit-timer {
+        right: 50%;
+        cursor: pointer;
+        @include translate(50%, -30px);
+      }
+    
+      .orbit-bullets {
+        top: 0;
+      }
+    
+    &:hover, &:focus {
+       .orbit-prev {
+         background: transparent url('../images/orbit-arrow-left.svg') no-repeat center center;
+         background-size: 21px 42px;
+       }
+    
+       .orbit-next {
+         background: transparent url('../images/orbit-arrow-right.svg') no-repeat center center;
+         background-size: 21px 42px;
+       } 
+        
+       .orbit-timer {
+          visibility: hidden;
+          background: transparent url('../images/orbit-play.svg') no-repeat 8px center;
+          background-size: 12px;
+        
+          &.paused {
+            visibility: hidden;
+            background: transparent url('../images/orbit-pause.svg') no-repeat 7px center;
+            background-size: 12px;
+          }
+       }
+    }
+  }
+

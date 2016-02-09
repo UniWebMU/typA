@@ -1,0 +1,51 @@
+@import "../core/mixins";
+
+$above-header-background: $primary-color !default;
+$above-header-color: $white !default;
+$above-header-color-hover: $primary-light-color !default;
+$height-above-header-bar: rem-calc(30) !default; //horní tmavá lišta s odkazy a jazykovou mutací - výška pro medium-up
+$height-above-header-bar-base: rem-calc(6) !default; //horní tmavá lišta - pro small pouze tenčí designová, bez obsahu
+
+.above-header-bar {
+  background: $above-header-background;
+  color: $above-header-color;
+  height: $height-above-header-bar-base;
+  letter-spacing: 0.115em;
+  text-transform: uppercase;
+    
+  a {
+    font-weight: $font-weight-normal;
+    text-decoration: none;
+    @include transition(all 0.1s ease);
+  }
+    
+  @media #{$medium-up} {
+    height: $height-above-header-bar;
+      
+    span {
+      font-size: rem-calc(12);
+      line-height: $height-above-header-bar;
+      margin-left: 0.5rem;
+        
+      &:first-child {
+        margin-left: 0;
+      }
+        
+      a {
+        color: $above-header-color;
+        &:hover {
+          color: $above-header-color-hover;
+          text-decoration: none;
+        }
+      }
+        
+      img {
+        position: relative;
+        bottom: 1px;
+        height: 12px;
+        width: auto;
+        margin-left: rem-calc(8);
+      }
+    }
+  }
+}

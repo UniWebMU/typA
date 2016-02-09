@@ -1,0 +1,1541 @@
+<!doctype html>
+<html class="no-js" lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+      
+    <title>Jednotná univerzitní webová prezentace MU | &#35;uniweb</title>
+      
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="../uniweb-v1/css/font-awesome.min.css" />
+      
+    <script src="../uniweb-v1/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  
+  <body>
+  <!--[if gte IE 9]>
+	  <style type="text/css">
+	    .top-header	 {
+	       filter: none;
+	    }
+	  </style>
+  <![endif]-->
+  	<div class="row-wide  above-header-bar">
+  		<div class="row">
+		  <div class="medium-7  columns  hide-for-small-only">
+	  	    <span class="mu-tag"><a href="http://www.muni.cz">Masarykova univerzita</a></span>
+		  </div>
+		  <div class="medium-5  columns  hide-for-small-only  text-right">
+	  		<span><a href="#">Přihlášení</a></span>
+	  		<span><a href="#" data-dropdown="language-choice" data-options="is_hover:true">čeština<img src="images/flags/CzechRepublic.png"></a></span>
+            <ul id="language-choice" class="f-dropdown" data-dropdown-content>
+              <li><a href="#">English<img src="images/flags/UnitedKingdom.png"></a></li>
+            </ul>
+		  </div>
+  		</div>
+    </div>
+    
+  	<div class="row-wide  top-header">
+	  	<div class="row identity-row">
+	      <div class="large-10  medium-9  columns">
+	        <a href="http://www.muni.cz" class="faculty-tag"></a>
+            <a class="logo-top-header">&nbsp;</a>
+            <a class="faculty-tag-text"><strong>Jednotná univerzitní webová prezentace MU</strong><br />uniweb</a>
+	      </div>
+	      <div class="large-2  medium-3  columns  hide-for-small-only">
+            <div class="row additional-menu">
+              <div class="columns">
+                <a href="#"><i class="fa fa-facebook-official"></i></a>
+              </div>
+            </div>
+            <div class="row collapse search-row">
+              <div class="small-9 columns">
+                <input type="text" placeholder="Hledej" />
+              </div>
+              <div class="small-3 columns">
+                <input class="button postfix" type="submit" value="" />
+              </div>
+            </div>
+	      </div>
+	    </div>
+        <div class="row  small-wide">
+	    	<div class="columns">
+              <div id="prim-top-bar-cont" class="contain-to-grid">
+                <nav id="prim-top-bar" class="top-bar" data-topbar role="navigation"  data-options="sticky_on: [medium, large]"> 
+                  <ul class="title-area"> 
+                    <li class="name"></li>
+                    <li class="toggle-topbar  menu-icon"><a href="#"><span></span></a></li> 
+                  </ul> 
+                    
+                  <section class="top-bar-section"> 
+                    <ul> 
+                      <li class="has-form  show-for-small-only">
+                        <div class="row  collapse search-row">
+                          <div class="small-11  columns">
+                            <input type="text" placeholder="Hledat" />
+                          </div>
+                          <div class="small-1  columns">
+                            <input class="button postfix" type="submit" value="" />
+                          </div>
+                        </div>
+                      </li>
+                      <li class="has-dropdown  show-for-small-only">
+                        <a  class="language-choice"><img src="images/flags/CzechRepublic.png">Čeština</a>
+                        <ul class="dropdown">
+                          <li class="active"><a href="#"  class="language-choice"><img src="images/flags/CzechRepublic.png">Čeština</a></li>
+                          <li><a href="#"  class="language-choice"><img src="images/flags/UnitedKingdom.png">English</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="index.html"><span>Úvod</span></a>
+                      </li>
+                      <li class="active">
+                        <a href="typografie.html"><span>Typografie</span></a>
+                      </li>
+                      <li>
+                        <a href="paticka.html"><span>Krátká patička</span></a>
+                      </li>
+                      <li>
+                        <a href="paticka2.html"><span>Patička mini</span></a>
+                      </li>
+                      <li>
+                        <a href="navigace-sticky.html"><span>Sticky navigace</span></a>
+                      </li>
+                      <li>
+                        <a href="moduly.html"><span>Moduly</span></a>
+                      </li>
+                      <li>
+                        <a href="vizitka.html"><span>Vizitka</span></a>
+                      </li>
+                      <li>
+                        <a href="ikonodlazdice.html"><span>Ikonodlaždice</span></a>
+                      </li>
+                    </ul> 
+                  </section> 
+                </nav>
+              </div>
+            </div>
+	    </div>
+	</div>
+      
+    <div class="row">
+	    <div class="columns  text-right">
+            <ul class="breadcrumbs">
+              <li><a href="index.html">Úvod</a></li>
+              <li class="current"><a href="typografie.html">typografie</a></li>
+            </ul>
+	    </div>
+	</div>
+    
+	<div class="row">
+	    <div class="columns">
+            <h1 data-magellan-destination="texty">Nadpis H1 na začátku stránky <small>ukázka textových elementů</small></h1><a name="texty"></a>
+	    </div>
+	</div>
+      
+	    <div class="row">
+	      <div class="columns">
+            <div id="magellan" data-magellan-expedition="fixed" class="magellan">
+              <dl class="sub-nav">
+                <dd data-magellan-arrival="texty"><a href="#texty">Texty</a></dd>
+                <dd data-magellan-arrival="navs"><a href="#navs">Navigace</a></dd>
+                <dd data-magellan-arrival="lists"><a href="#lists">Seznamy</a></dd>
+                <dd data-magellan-arrival="buttons"><a href="#buttons">Tlačítka</a></dd>
+                <dd data-magellan-arrival="dropdowns"><a href="#dropdowns">Dropdowns</a></dd>
+                <dd data-magellan-arrival="tables"><a href="#tables">Tabulky</a></dd>
+                <dd data-magellan-arrival="tabs"><a href="#tabs">Tabs</a></dd>
+                <dd data-magellan-arrival="tab-switcher"><a href="#tab-switcher">Tab switcher</a></dd>
+                <dd data-magellan-arrival="different"><a href="#different">Různé</a></dd>
+                <dd data-magellan-arrival="panels"><a href="#panels">Panely</a></dd>
+                <dd data-magellan-arrival="media"><a href="#media">Média</a></dd>
+              </dl>
+            </div>
+            <p>Tato navigace je funkční a zároveň je ukázkou typu Magellan Nav nastylovaná do podoby Secondary Top Bar pro možnost navigace v rámci jedné strany.</p>
+            <hr>
+          </div>
+	    </div>
+        
+        <div class="row">
+	      <div class="columns">
+            
+            <div class="row">
+              <div class="medium-6 columns">
+                <h2>Nadpis H2 <small>small part</small></h2>
+                <p>Klasická velikost písma 16. Lorem <a href="#">ipsum dolor</a> sit amet, consectetur adipiscing elit. Vestibulum cursus tincidunt tristique. Curabitur efficitur hendrerit lacinia. Fusce in mollis neque. Suspendisse varius tortor volutpat, condimentum massa non, aliquam est. Donec elementum leo felis, eu aliquam nisl porta a. Praesent diam augue, pellentesque in fringilla fringilla, mollis eu tortor. Proin non efficitur est. Nullam at feugiat arcu. Fusce lobortis lorem eu commodo sodales. </p>
+                <h3>Nadpis H3 <small>small part</small></h3>
+                <p>Klasická velikost písma 16. Lorem <a href="#">ipsum dolor</a> sit amet, consectetur adipiscing elit. Vestibulum cursus tincidunt tristique. Curabitur efficitur hendrerit lacinia. Fusce in mollis neque. Suspendisse varius tortor volutpat, condimentum massa non, aliquam est. Donec elementum leo felis, eu aliquam nisl porta a. Praesent diam augue, pellentesque in fringilla fringilla, mollis eu tortor. Proin non efficitur est. Nullam at feugiat arcu. Fusce lobortis lorem eu commodo sodales. </p>
+                <h4>Nadpis H4 <small>small part</small></h4>
+                <p>Klasická velikost písma 16. Lorem <a href="#">ipsum dolor</a> sit amet, consectetur adipiscing elit. Vestibulum cursus tincidunt tristique. Curabitur efficitur hendrerit lacinia. Fusce in mollis neque. Suspendisse varius tortor volutpat, condimentum massa non, aliquam est. Donec elementum leo felis, eu aliquam nisl porta a. Praesent diam augue, pellentesque in fringilla fringilla, mollis eu tortor. Proin non efficitur est. Nullam at feugiat arcu. Fusce lobortis lorem eu commodo sodales. </p>
+                <h5>Nadpis H5 <small>small part</small></h5>
+                <p>Klasická velikost písma 16. Lorem <a href="#">ipsum dolor</a> sit amet, consectetur adipiscing elit. Vestibulum cursus tincidunt tristique. Curabitur efficitur hendrerit lacinia. Fusce in mollis neque. Suspendisse varius tortor volutpat, condimentum massa non, aliquam est. Donec elementum leo felis, eu aliquam nisl porta a. Praesent diam augue, pellentesque in fringilla fringilla, mollis eu tortor. Proin non efficitur est. Nullam at feugiat arcu. Fusce lobortis lorem eu commodo sodales. </p>
+                <h6>Nadpis H6 <small>small part</small></h6>
+                <p>Klasická velikost písma 16. Lorem <a href="#">ipsum dolor</a> sit amet, consectetur adipiscing elit. Vestibulum cursus tincidunt tristique. Curabitur efficitur hendrerit lacinia. Fusce in mollis neque. Suspendisse varius tortor volutpat, condimentum massa non, aliquam est. Donec elementum leo felis, eu aliquam nisl porta a. Praesent diam augue, pellentesque in fringilla fringilla, mollis eu tortor. Proin non efficitur est. Nullam at feugiat arcu. Fusce lobortis lorem eu commodo sodales. </p>
+              </div>
+
+              <div class="medium-6 columns">
+                <p></p>
+                <p>Klasická velikost písma 16. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum cursus tincidunt tristique. Curabitur efficitur hendrerit lacinia. Fusce in mollis neque. Suspendisse varius tortor volutpat, condimentum massa non, aliquam est. Donec elementum leo felis, eu aliquam nisl porta a. Praesent diam augue, pellentesque in fringilla fringilla, mollis eu tortor. Proin non efficitur est. Nullam at feugiat arcu. Fusce lobortis lorem eu commodo sodales. </p>
+                <p class="bigger-text">Větší velikost písma 18 .bigger-text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum cursus tincidunt tristique. Curabitur efficitur hendrerit lacinia. Fusce in mollis neque. Suspendisse varius tortor volutpat, condimentum massa non, aliquam est. Donec elementum leo felis, eu aliquam nisl porta a. Praesent diam augue, pellentesque in fringilla fringilla, mollis eu tortor. Proin non efficitur est. Nullam at feugiat arcu. Fusce lobortis lorem eu commodo sodales. </p>
+                <p class="big-text">Velká velikost písma 20 .big-text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum cursus tincidunt tristique. Curabitur efficitur hendrerit lacinia. Fusce in mollis neque. Suspendisse varius tortor volutpat, condimentum massa non, aliquam est. Donec elementum leo felis, eu aliquam nisl porta a. Praesent diam augue, pellentesque in fringilla fringilla, mollis eu tortor. Proin non efficitur est. Nullam at feugiat arcu. Fusce lobortis lorem eu commodo sodales. </p>
+                <span class="huge-text">span velikosti písma .huge-text</span><br>
+                <span class="holy-cow-text">span velikosti písma .holy-cow-text</span><br>
+                <span class="what-the-hell-text">span velikosti písma .what the hell text</span>
+              </div>
+            </div>
+            
+            <div class="row  editorial">
+                <div class="medium-9  columns">
+                    <h1>Nadpis H1 <strong>strong</strong> editorial HP</h1>
+                </div>
+                
+                <div class="medium-3  columns">
+                    <a class="button  expand  small  main-h1  show-for-large-up">Virtuální prohlídka<i class="fa  fa-caret-right"></i></a>
+                    <a class="button  expand  small  main-h1  show-for-medium-only">Prohlídka<i class="fa  fa-caret-right"></i></a>
+                </div>
+                
+                <div class="columns">
+                    <p>
+                         Odstavcový text velikosti 20 (mobilní 18) přímo určený třídou řádku .editorial stejně jako nadpis H1. Předurčeno výhradně pro perex na homepage. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum cursus tincidunt tristique. Curabitur efficitur hendrerit lacinia. Fusce in mollis neque. Suspendisse varius tortor volutpat, condimentum massa non, aliquam est. Donec elementum leo felis, eu aliquam nisl porta a. Praesent diam augue, pellentesque in fringilla fringilla, mollis eu tortor. Proin non efficitur est. Nullam at feugiat arcu. Fusce lobortis lorem eu commodo sodales.
+                    </p>
+                </div>
+	        </div>
+            
+            <div class="row">
+              <div class="columns"><h2>Text Colors (Headers or Spans or Paragraphs)</h2></div>
+              <div class="medium-4 columns">
+                <span class="bigger-text  primary-dark">span velikosti písma .bigger-text .primary-dark</span><br>
+                <span class="bigger-text  primary">span velikosti písma .bigger-text .primary</span><br>
+                <span class="bigger-text  primary-light">span velikosti písma .bigger-text .primary-light</span><br>
+                <span class="bigger-text  secondary">span velikosti písma .bigger-text .secondary</span><br>
+                <span class="bigger-text  third">span velikosti písma .bigger-text .third</span>
+              </div>
+
+              <div class="medium-4 columns">
+                <span class="bigger-text  gray-dark">span velikosti písma .bigger-text .gray-dark</span><br>
+                <span class="bigger-text  gray">span velikosti písma .bigger-text .gray</span><br>
+                <span class="bigger-text  gray-lighter">span velikosti písma .bigger-text .gray-lighter</span><br>
+                <span class="bigger-text  gray-light">span velikosti písma .bigger-text .gray-light</span><br>
+                <span class="bigger-text  gray-very-light  bgrd-gray-light">span velikosti písma .bigger-text .gray-very-light</span><br>
+                <span class="bigger-text  white  bgrd-gray-light">span velikosti písma .bigger-text .gray-light</span><br>
+              </div>
+                
+              <div class="medium-4 columns">
+                <span class="bigger-text  red">span velikosti písma .bigger-text .red</span><br>
+                <span class="bigger-text  orange">span velikosti písma .bigger-text .orange</span><br>
+                <span class="bigger-text  yellow">span velikosti písma .bigger-text .yellow</span><br>
+                <span class="bigger-text  green">span velikosti písma .bigger-text .green</span><br>
+                <span class="bigger-text  green2">span velikosti písma .bigger-text .green2</span><br>
+                <span class="bigger-text  blue">span velikosti písma .bigger-text .blue</span><br>
+                <span class="bigger-text  blue2">span velikosti písma .bigger-text .blue2</span><br>
+                <span class="bigger-text  purple">span velikosti písma .bigger-text .purple</span><br>
+                <span class="bigger-text  purple2">span velikosti písma .bigger-text .purple2</span>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="columns"><h2>Highlights (Spans or Paragraphs or Headers)</h2></div>
+              <div class="medium-4 columns">
+                <span class="bigger-text  highlight-primary-dark">span velikosti písma .bigger-text .highlight-primary-dark</span><br>
+                <span class="bigger-text  highlight-primary">span velikosti písma .bigger-text .highlight-primary</span><br>
+                <span class="bigger-text  highlight-primary-light">span velikosti písma .bigger-text .highlight-primary-light</span><br>
+                <span class="bigger-text  highlight-primary-very-light">span velikosti písma .bigger-text .highlight-primary-very-light</span><br>
+                <span class="bigger-text  highlight-secondary">span velikosti písma .bigger-text .highlight-secondary</span><br>
+                <span class="bigger-text  highlight-third">span velikosti písma .bigger-text .highlight-third</span>
+              </div>
+
+              <div class="medium-4 columns">
+                <span class="bigger-text  highlight-gray-dark">span velikosti písma .bigger-text .highlight-gray-dark</span><br>
+                <span class="bigger-text  highlight-gray">span velikosti písma .bigger-text .highlight-gray</span><br>
+                <span class="bigger-text  highlight-gray-lighter">span velikosti písma .bigger-text .highlight-gray-lighter</span><br>
+                <span class="bigger-text  highlight-gray-light">span velikosti písma .bigger-text .highlight-gray-light</span><br>
+                <span class="bigger-text  highlight-gray-very-light">span velikosti písma .bigger-text .highlight-gray-very-light</span><br>
+                <span class="bigger-text  highlight-white">span velikosti písma .bigger-text .highlight-gray-very-light</span>
+              </div>
+                
+              <div class="medium-4 columns">
+                <span class="bigger-text  highlight-red">span velikosti písma .bigger-text .highlight-red</span><br>
+                <span class="bigger-text  highlight-orange">span velikosti písma .bigger-text .highlight-orange</span><br>
+                <span class="bigger-text  highlight-yellow">span velikosti písma .bigger-text .highlight-yellow</span><br>
+                <span class="bigger-text  highlight-green">span velikosti písma .bigger-text .highlight-green</span><br>
+                <span class="bigger-text  highlight-green2">span velikosti písma .bigger-text .highlight-green2</span><br>
+                <span class="bigger-text  highlight-blue">span velikosti písma .bigger-text .highlight-blue</span><br>
+                <span class="bigger-text  highlight-blue2">span velikosti písma .bigger-text .highlight-blue2</span><br>
+                <span class="bigger-text  highlight-purple">span velikosti písma .bigger-text .highlight-purple</span><br>
+                <span class="bigger-text  highlight-purple2">span velikosti písma .bigger-text .highlight-purple2</span>
+              </div>
+            </div>
+            
+            <hr>
+              
+              <div class="row">
+	          <div class="columns">
+                <h1 data-magellan-destination="barvy">Barvy</small></h1><a name="barvy"></a>
+	          </div>
+              
+              <div class="small-3 columns">
+                <div class="panel primary-dark">primary dark</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel primary">primary</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel primary-light">primary light</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel primary-very-light">primary very light</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel secondary">secondary</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel third">third</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel gray-dark">gray dark</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel gray">gray</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel gray-lighter">gray lighter</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel gray-light">gray light</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel gray-very-light">gray very light</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel white">white</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel red">red</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel orange">orange</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel yellow">yellow</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel green">green</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel green2">green2</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel blue">blue</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel blue2">blue2</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel purple">purple</div>
+	          </div>
+              <div class="small-3 columns">
+                <div class="panel purple2">purple2</div>
+	          </div>
+	        </div>
+              
+            <hr>
+            
+            <div class="row">
+              <div class="columns"><h2 data-magellan-destination="navs">Navigations</h2><a name="navs"></a></div>
+              <div class="columns">
+                <h3>Top Bar</h3>
+                <div class="row">
+                    <div class="columns">
+                        <div id="prim-top-bar-cont-test" class="contain-to-grid">
+                        <nav id="prim-top-bar-test" class="top-bar" data-topbar role="navigation"> 
+                            <ul class="title-area"> 
+                                <li class="name"></li>
+                                <li class="toggle-topbar  menu-icon"><a href="#"><span></span></a></li> 
+                            </ul> 
+                            <section class="top-bar-section"> 
+                                <ul> 
+                                    <li class="has-form  hide-for-small-up">
+                                        <div class="row">
+                                            <div class="small-9  columns">
+                                                <div class="row  collapse">
+                                                    <div class="small-10  columns">
+                                                        <input type="text" placeholder="Hledat" />
+                                                    </div>
+                                                    <div class="small-2  columns">
+                                                        <a href="#" class="button  tiny  postfix"><i class="fa  fa-search"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="small-3  columns">
+                                                <a class="button  tiny  language"><img src="images/flag-czech.png"/></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="index.html"><span>Úvod</span></a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">Úřední deska</a></li>
+                                            <li><a href="#">Aktuality</a></li>
+                                            <li><a href="#">Předpisy, normy a zákony</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="typografie.html"><span>O&nbsp;fakultě</span></a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">Vedení fakulty</a></li>
+                                            <li><a href="#">Orgány fakulty</a></li>
+                                            <li><a href="#">Lidé na&nbsp;fakultě</a></li>
+                                            <li><a href="#">Prezentace fakulty</a></li>
+                                            <li><a href="#">Historie a současnost</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="osoba.html"><span>Zájemci o&nbsp;studium</span></a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">Přijímací řízení</a></li>
+                                            <li><a href="#">F&amp;Q</a></li>
+                                            <li><a href="#">Studim jinak</a></li>
+                                            <li><a href="#">Studium v zahraničí</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="druha-uroven.html"><span>Studium</span></a>
+                                        <ul class="dropdown">
+                                            <li>
+                                                <a href="#">Bakalářské studium</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Magisterské studium</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Doktorské studium</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Studijní obory</a>
+                                            </li>
+                                            <li><a href="#">Přijímací řízení</a></li>
+                                            <li><a href="#">Den otevřených dveří</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="moduly.html"><span>Věda a&nbsp;výzkum</span></a>
+                                        <ul class="dropdown  right">
+                                            <li><a href="#">Oddělení pro vědu a výzkum</a></li>
+                                            <li><a href="#">Výzkumná činnost</a></li>
+                                            <li><a href="#">Publikační činnost</a></li>
+                                            <li><a href="#">Výzkumná pracoviště</a></li>
+                                            <li><a href="#">Klíčová výzkumná témata</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a><span>Zahraniční spolupráce</span></a>
+                                        <ul class="dropdown  right">
+                                            <li><a href="#">Oddělení zahraničních vztahů</a></li>
+                                            <li><a href="#">Aktuální nabídky</a></li>
+                                            <li><a href="#">Letní školy</a></li>
+                                            <li><a href="#">Studijní programy v zahraničí</a></li>
+                                            <li><a href="#">Informace pro zahraniční studenty</a></li>
+                                            <li><a href="#">Zahraniční vyučující a výzkumníci</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a><span>Média</span></a>
+                                        <ul class="dropdown  right">
+                                            <li><a href="#">Tiskové zprávy</a></li>
+                                            <li><a href="#">Archiv TZ</a></li>
+                                            <li><a href="#">FSS v číslech</a></li>
+                                            <li><a href="#">Fotobanka</a></li>
+                                            <li><a href="#">Kontakty pro média</a></li>
+                                            <li><a href="#">Databáze expertů</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a><span>Kontakty</span></a>
+                                        <ul class="dropdown  right">
+                                            <li><a href="#">Zaměstnanci</a></li>
+                                            <li><a href="#">Kontakty pro média</a></li>
+                                            <li><a href="#">Studijní oddělení</a></li>
+                                        </ul>
+                                    </li>
+                                </ul> 
+                            </section> 
+                          </nav>
+                        </div>
+                    </div>
+                </div>
+              </div>
+                
+              <div id="sec-top-bar-placeholder"></div>
+                
+              <div class="columns">
+                <h3>Secondary Top Bar</h3>
+                  <div class="row">
+                    <div class="columns">
+                        <div id="sec-top-bar-cont" class="contain-to-grid-main">
+                        <nav id="sec-top-bar" class="main-bar" data-mainbar role="navigation"> 
+                            <ul class="title-area"> 
+                                <li class="name"></li>
+                                <li class="toggle-mainbar  menu-icon"><a href="#"><span></span></a></li> 
+                            </ul> 
+                            <section class="main-bar-section"> 
+                                <ul> 
+                                    <li class="has-form  hide-for-small-up">
+                                        <div class="row">
+                                            <div class="small-9  columns">
+                                                <div class="row  collapse">
+                                                    <div class="small-10  columns">
+                                                        <input type="text" placeholder="Hledat" />
+                                                    </div>
+                                                    <div class="small-2  columns">
+                                                        <a href="#" class="button  tiny  postfix"><i class="fa  fa-search"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="small-3  columns">
+                                                <a class="button  tiny  language"><img src="images/flag-czech.png"/></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="index.html"><span>Úvod</span></a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">Úřední deska</a></li>
+                                            <li><a href="#">Aktuality</a></li>
+                                            <li><a href="#">Předpisy, normy a zákony</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="typografie.html"><span>O&nbsp;fakultě</span></a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">Vedení fakulty</a></li>
+                                            <li><a href="#">Orgány fakulty</a></li>
+                                            <li><a href="#">Lidé na&nbsp;fakultě</a></li>
+                                            <li><a href="#">Prezentace fakulty</a></li>
+                                            <li><a href="#">Historie a současnost</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="osoba.html"><span>Zájemci o&nbsp;studium</span></a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">Přijímací řízení</a></li>
+                                            <li><a href="#">F&amp;Q</a></li>
+                                            <li><a href="#">Studim jinak</a></li>
+                                            <li><a href="#">Studium v zahraničí</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="druha-uroven.html"><span>Studium</span></a>
+                                        <ul class="dropdown">
+                                            <li>
+                                                <a href="#">Bakalářské studium</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Magisterské studium</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Doktorské studium</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Studijní obory</a>
+                                            </li>
+                                            <li><a href="#">Přijímací řízení</a></li>
+                                            <li><a href="#">Den otevřených dveří</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="moduly.html"><span>Věda a&nbsp;výzkum</span></a>
+                                        <ul class="dropdown  right">
+                                            <li><a href="#">Oddělení pro vědu a výzkum</a></li>
+                                            <li><a href="#">Výzkumná činnost</a></li>
+                                            <li><a href="#">Publikační činnost</a></li>
+                                            <li><a href="#">Výzkumná pracoviště</a></li>
+                                            <li><a href="#">Klíčová výzkumná témata</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a><span>Zahraniční spolupráce</span></a>
+                                        <ul class="dropdown  right">
+                                            <li><a href="#">Oddělení zahraničních vztahů</a></li>
+                                            <li><a href="#">Aktuální nabídky</a></li>
+                                            <li><a href="#">Letní školy</a></li>
+                                            <li><a href="#">Studijní programy v zahraničí</a></li>
+                                            <li><a href="#">Informace pro zahraniční studenty</a></li>
+                                            <li><a href="#">Zahraniční vyučující a výzkumníci</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a><span>Média</span></a>
+                                        <ul class="dropdown  right">
+                                            <li><a href="#">Tiskové zprávy</a></li>
+                                            <li><a href="#">Archiv TZ</a></li>
+                                            <li><a href="#">FSS v číslech</a></li>
+                                            <li><a href="#">Fotobanka</a></li>
+                                            <li><a href="#">Kontakty pro média</a></li>
+                                            <li><a href="#">Databáze expertů</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a><span>Kontakty</span></a>
+                                        <ul class="dropdown  right">
+                                            <li><a href="#">Zaměstnanci</a></li>
+                                            <li><a href="#">Kontakty pro média</a></li>
+                                            <li><a href="#">Studijní oddělení</a></li>
+                                        </ul>
+                                    </li>
+                                </ul> 
+                            </section> 
+                          </nav>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="columns">
+                <h3>Simple Nav</h3>
+                <nav class="simple-nav">
+                    <ul>
+                        <li><a>mise, vize a poslání</a></li>
+                        <li class="active"><a>výhody spolupráce</a></li>
+                        <li><a>projekt</a></li>
+                        <li><a>média</a></li>
+                        <li><a>ke stažení</a></li>
+                        <li><a>partneři</a></li>
+                    </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="row">
+              <div class="columns">
+                <h3>Icon Bar</h3>
+                  <div class="icon-bar five-up">
+                      <a class="item">
+                        <i class="fa fa-home"></i>
+                        <label>Home</label>
+                      </a>
+                      <a class="item">
+                        <i class="fa fa-bookmark"></i>
+                        <label>Bookmark</label>
+                      </a>
+                      <a class="item">
+                        <i class="fa fa-info"></i>
+                        <label>Info</label>
+                      </a>
+                      <a class="item">
+                        <i class="fa fa-envelope"></i>
+                        <label>Mail</label>
+                      </a>
+                      <a class="item">
+                        <i class="fa fa-thumbs-up"></i>
+                        <label>Like</label>
+                      </a>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="medium-4 columns">
+                <h3>Breadcrumbs</h3>
+                <ul class="breadcrumbs">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li class="unavailable"><a href="#">Gene Splicing</a></li>
+                  <li class="current"><a href="#">Cloning</a></li>
+                </ul>
+              </div>
+              <div class="medium-4 columns">
+                <h3>Sub Nav</h3>
+                  <dl class="sub-nav">
+                    <dt>Filter:</dt>
+                    <dd class="active"><a href="#">All</a></dd>
+                    <dd><a href="#">Active</a></dd>
+                    <dd><a href="#">Pending</a></dd>
+                  </dl>
+              </div>
+              <div class="medium-4 columns">
+                <h3>Pagination</h3>
+                <ul class="pagination">
+                  <li class="arrow unavailable"><a href="">&laquo;</a></li>
+                  <li class="current"><a href="">1</a></li>
+                  <li><a href="">2</a></li>
+                  <li><a href="">3</a></li>
+                  <li><a href="">4</a></li>
+                  <li class="unavailable"><a href="">&hellip;</a></li>
+                  <li><a href="">12</a></li>
+                  <li><a href="">13</a></li>
+                  <li class="arrow"><a href="">&raquo;</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="medium-3 columns">
+                <h3>Side Nav</h3>
+                <ul class="side-nav">
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
+                  <li><a href="#">Link 4</a></li>
+                </ul>
+              </div>
+              <div class="medium-3 columns end">
+                <h3>Second Side Nav</h3>
+              </div>
+            </div>
+              
+            <hr>
+              
+            <div class="row">
+              <div class="columns"><h2 data-magellan-destination="lists">Lists</h2><a name="lists"></a></div>
+              <div class="medium-3  columns">
+                 <h3>Disc List</h3>
+                 <ul class="disc">
+                  <li>List item with a much longer description or more content.</li>
+                  <li>List item</li>
+                  <li>List item
+                    <ul>
+                      <li>Nested list item</li>
+                      <li>Nested list item</li>
+                      <li>Nested list item</li>
+                    </ul>
+                  </li>
+                  <li>List item</li>
+                  <li>List item</li>
+                  <li>List item</li>
+                 </ul>
+              </div>
+
+              <div class="medium-3  columns">
+                 <h3>Circle List</h3>
+                 <ul class="circle">
+                  <li>List item with a much longer description or more content.</li>
+                  <li>List item</li>
+                  <li>List item
+                    <ul>
+                      <li>Nested list item</li>
+                      <li>Nested list item</li>
+                      <li>Nested list item</li>
+                    </ul>
+                  </li>
+                  <li>List item</li>
+                  <li>List item</li>
+                  <li>List item</li>
+                 </ul>
+              </div>
+              <div class="medium-3  columns">
+                 <h3>Square List</h3>
+                 <ul class="square">
+                  <li>List item with a much longer description or more content.</li>
+                  <li>List item</li>
+                  <li>List item
+                    <ul>
+                      <li>Nested list item</li>
+                      <li>Nested list item</li>
+                      <li>Nested list item</li>
+                    </ul>
+                  </li>
+                  <li>List item</li>
+                  <li>List item</li>
+                  <li>List item</li>
+                 </ul>
+              </div>
+              <div class="medium-3  columns">
+                 <h3>No-bullet List</h3>
+                 <ul class="no-bullet">
+                  <li>List item with a much longer description or more content.</li>
+                  <li>List item</li>
+                  <li>List item
+                    <ul>
+                      <li>Nested list item</li>
+                      <li>Nested list item</li>
+                      <li>Nested list item</li>
+                    </ul>
+                  </li>
+                  <li>List item</li>
+                  <li>List item</li>
+                  <li>List item</li>
+                 </ul>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="medium-3  columns">
+                 <h3>Numbered List</h3>
+                 <ol>
+                  <li>List item with a much longer description or more content.</li>
+                  <li>List item</li>
+                  <li>List item
+                    <ol>
+                      <li>Nested List Item</li>
+                      <li>Nested List Item</li>
+                      <li>Nested List Item</li>
+                    </ol>
+                  </li>
+                  <li>List item</li>
+                  <li>List item</li>
+                  <li>List item</li>
+                 </ol>
+              </div>
+
+              <div class="medium-3  columns">
+                <h3>Definition List</h3>
+                <dl>
+                  <dt>Definition Title</dt>
+                  <dd>Definition Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.</dd>
+                </dl>
+              </div>
+              <div class="medium-3  columns">
+                <h3>Blockquote</h3>
+                <blockquote>Those people who think they know everything are a great annoyance to those of us who do.<cite>Isaac Asimov</cite></blockquote>
+              </div>
+              <div class="medium-3  columns">
+                <h3>V-Card</h3>
+                 <ul class="vcard">
+                  <li class="fn">Gaius Baltar</li>
+                  <li class="street-address">123 Colonial Ave.</li>
+                  <li class="locality">Caprica City</li>
+                  <li><span class="state">Caprica</span>, <span class="zip">12345</span></li>
+                  <li class="email"><a href="#">g.baltar@example.com</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <hr>
+            
+            <div class="row">
+              <div class="columns"><h2 data-magellan-destination="buttons">Buttons</h2><a name="buttons"></a></div>
+              <div class="medium-3 columns">
+                  <h3>Default Button</h3>
+                  <a href="#" class="button">Default Button</a>
+
+                  <h3>Button Sizing</h3>
+                  <a href="#" class="button tiny">Tiny Button</a>
+                  <a href="#" class="button small">Small Button</a>
+                  <a href="#" class="button">Default Button</a>
+                  <a href="#" class="button disabled">Disabled Button</a>
+                  <a href="#" class="button large">Large Button</a>
+                  <a href="#" class="button expand">Expanded Button</a>
+                  <!-- Radius Classes -->
+                  <a href="#" class="button round">Round Button</a>
+                  <a href="#" class="button radius">Radius Button</a>
+              </div>
+                
+              <div class="medium-9 columns">
+                 <div class="row">
+                    <div class="columns"><h3>Button Colors &ndash; expanded</h3></div>
+                    <div class="medium-3 columns">
+                      <a href="#" class="button small expand">Default Button</a><br>
+                      <a href="#" class="button small expand success">Success Button</a><br>
+                      <a href="#" class="button small expand secondary">Secondary Button</a><br>
+                      <a href="#" class="button small expand alert">Alert Button</a><br>
+                      <a href="#" class="button small expand info">Info Button</a><br>
+                      <a href="#" class="button small expand disabled">Disabled Button</a>
+                    </div>
+                    <div class="medium-3 columns">
+                      <a href="#" class="button small expand primary-dark">Primary Dark</a><br>
+                      <a href="#" class="button small expand">Primary Default</a><br>
+                      <a href="#" class="button small expand primary-light">Primary Light</a><br>
+                      <a href="#" class="button small expand primary-very-light">Primary Very Light</a><br>
+                      <a href="#" class="button small expand third">Third</a><br>
+                      <a href="#" class="button small expand link">Link Button</a>
+                    </div>
+                    <div class="medium-3 columns">
+                      <a href="#" class="button small expand gray-dark">Gray Dark</a><br>
+                      <a href="#" class="button small expand gray">Gray</a><br>
+                      <a href="#" class="button small expand gray-lighter">Gray Lighter</a><br>
+                      <a href="#" class="button small expand gray-light">Gray Light</a><br>
+                      <a href="#" class="button small expand gray-very-light">Gray Very Light</a><br>
+                      <a href="#" class="button small expand white">White</a>
+                    </div>
+                    <div class="medium-3 columns">
+                      <a href="#" class="button small expand red">Red</a><br>
+                      <a href="#" class="button small expand orange">Orange</a><br>
+                      <a href="#" class="button small expand yellow">Yellow</a><br>
+                      <a href="#" class="button small expand green">Green</a><br>
+                      <a href="#" class="button small expand green2">Green2</a><br>
+                      <a href="#" class="button small expand blue">Blue</a><br>
+                      <a href="#" class="button small expand blue2">Blue2</a><br>
+                      <a href="#" class="button small expand purple">Purple</a><br>
+                      <a href="#" class="button small expand purple2">Purple2</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="medium-5 columns">
+                  <h3>Button Group</h3>
+                  <ul class="button-group">
+                    <li><a href="#" class="button">Button 1</a></li>
+                    <li><a href="#" class="button">Button 2</a></li>
+                    <li><a href="#" class="button">Button 3</a></li>
+                  </ul>
+              </div>
+              <div class="medium-3 columns">
+                  <h3>Split Button</h3>
+                  <a href="#" class="button split">Split Button <span data-dropdown="drop"></span></a><br>
+                    <ul id="drop" class="f-dropdown" data-dropdown-content>
+                      <li><a href="#">This is a link</a></li>
+                      <li><a href="#">This is another</a></li>
+                      <li><a href="#">Yet another</a></li>
+                    </ul>
+              </div>
+              <div class="medium-4 columns">
+                  <h3>Dropdown Button</h3>
+                  <button href="#" data-dropdown="drop8" aria-controls="drop8" aria-expanded="false" class="button dropdown expand">Dropdown Button</button><br>
+                    <ul id="drop8" data-dropdown-content class="f-dropdown" aria-hidden="true">
+                      <li><a href="#">This is a link</a></li>
+                      <li><a href="#">This is another</a></li>
+                      <li><a href="#">Yet another</a></li>
+                    </ul>
+              </div>
+            </div>
+            
+            <hr>
+            
+            <div class="row">
+              <div class="columns"><h2 data-magellan-destination="dropdowns">Dropdowns</h2><a name="dropdowns"></a></div>
+              
+              <div class="medium-3 columns">
+                  <h3>Basic</h3>
+                  <a data-dropdown="drop1" aria-controls="drop1" aria-expanded="false">Has Dropdown</a>
+                    <ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+                      <li><a href="#">This is a link</a></li>
+                      <li><a href="#">This is another</a></li>
+                      <li><a href="#">Yet another</a></li>
+                    </ul>
+                    <a data-dropdown="drop2" aria-controls="drop2" aria-expanded="false">Has Content Dropdown</a>
+                    <div id="drop2" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
+                      <p>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!</p>
+                    </div>
+              </div>
+              <div class="medium-3 columns">
+                  <h3>Advanced</h3>
+                  <a href="#" class="button" data-dropdown="drop3">Link Dropdown &raquo;</a>
+                    <ul id="drop3" class="f-dropdown" data-dropdown-content>
+                      <li><a href="#">This is a link</a></li>
+                      <li><a href="#">This is another</a></li>
+                      <li><a href="#">Yet another</a></li>
+                    </ul>
+              </div>
+              <div class="medium-3 columns">
+                  <h3>Directions</h3>
+                    <a href="#" data-options="align:left" data-dropdown="drop4" class="button">Left Dropdown &raquo;</a>
+                    <a href="#" data-options="align:right" data-dropdown="drop5" class="button">Right Dropdown &raquo;</a>
+                    <a href="#" data-options="align:top" data-dropdown="drop6" class="button">Top Dropdown &raquo;</a>
+                    <a href="#" data-options="align:bottom" data-dropdown="drop7" class="button">Bottom Dropdown &raquo;</a>
+                    <ul id="drop4" class="f-dropdown" data-dropdown-content>
+                      <li><a href="#">This is a link</a></li>
+                      <li><a href="#">This is another</a></li>
+                      <li><a href="#">Yet another</a></li>
+                    </ul>
+                    <ul id="drop5" class="f-dropdown" data-dropdown-content>
+                      <li><a href="#">This is a link</a></li>
+                      <li><a href="#">This is another</a></li>
+                      <li><a href="#">Yet another</a></li>
+                    </ul>
+                    <ul id="drop6" class="f-dropdown" data-dropdown-content>
+                      <li><a href="#">This is a link</a></li>
+                      <li><a href="#">This is another</a></li>
+                      <li><a href="#">Yet another</a></li>
+                    </ul>
+                    <ul id="drop7" class="f-dropdown" data-dropdown-content>
+                      <li><a href="#">This is a link</a></li>
+                      <li><a href="#">This is another</a></li>
+                      <li><a href="#">Yet another</a></li>
+                    </ul>
+              </div>
+              <div class="medium-3 columns">
+                  <h3>Hover</h3>
+                  <a href="#" data-dropdown="hover1" data-options="is_hover:true; hover_timeout:5000">Has Hover Dropdown</a>
+                    <ul id="hover1" class="f-dropdown" data-dropdown-content>
+                      <li><a href="#">This is a link</a></li>
+                      <li><a href="#">This is another</a></li>
+                      <li><a href="#">Yet another</a></li>
+                    </ul>
+              </div>
+            </div>
+            
+            <hr>
+            
+            <div class="row">
+              <div class="columns">
+                <h2 data-magellan-destination="tables">Tables</h2><a name="tables"></a>
+                <table class="fullwidth">
+                  <thead>
+                    <tr>
+                      <th width="200">Table Header</th>
+                      <th>Table Header</th>
+                      <th width="150">Table Header</th>
+                      <th width="150">Table Header</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Content Goes Here</td>
+                      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                      <td>Content Goes Here</td>
+                      <td>Content Goes Here</td>
+                    </tr>
+                    <tr>
+                      <td>Content Goes Here</td>
+                      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                      <td>Content Goes Here</td>
+                      <td>Content Goes Here</td>
+                    </tr>
+                    <tr>
+                      <td>Content Goes Here</td>
+                      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                      <td>Content Goes Here</td>
+                      <td>Content Goes Here</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="columns">
+                <h2 data-magellan-destination="tabs">Tabs</h2><a name="tabs"></a>
+                
+                <ul class="tabs" data-tab>
+                  <li class="tab-title active"><a href="#panel11">A</a></li>
+                  <li class="tab-title"><a href="#panel21">B</a></li>
+                  <li class="tab-title"><a href="#panel31">C</a></li>
+                  <li class="tab-title"><a href="#panel41">D</a></li>
+                  <li class="tab-title"><a href="#">E</a></li>
+                  <li class="tab-title"><a href="#">F</a></li>
+                  <li class="tab-title"><a href="#">G</a></li>
+                  <li class="tab-title"><a href="#">H</a></li>
+                  <li class="tab-title"><a href="#">I</a></li>
+                  <li class="tab-title"><a href="#">J</a></li>
+                  <li class="tab-title"><a href="#">K</a></li>
+                  <li class="tab-title"><a href="#">L</a></li>
+                  <li class="tab-title"><a href="#">M</a></li>
+                  <li class="tab-title"><a href="#">N</a></li>
+                  <li class="tab-title"><a href="#">O</a></li>
+                  <li class="tab-title"><a href="#">P</a></li>
+                  <li class="tab-title"><a href="#">Q</a></li>
+                  <li class="tab-title"><a href="#">R</a></li>
+                  <li class="tab-title"><a href="#">S</a></li>
+                  <li class="tab-title"><a href="#">T</a></li>
+                  <li class="tab-title"><a href="#">U</a></li>
+                  <li class="tab-title"><a href="#">V</a></li>
+                  <li class="tab-title"><a href="#">W</a></li>
+                  <li class="tab-title"><a href="#">X</a></li>
+                  <li class="tab-title"><a href="#">Y</a></li>
+                  <li class="tab-title"><a href="#">Z</a></li>
+                </ul>
+                <div class="tabs-content">
+                  <div class="content active" id="panel11">
+                    <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
+                  </div>
+                  <div class="content" id="panel21">
+                    <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+                  </div>
+                  <div class="content" id="panel31">
+                    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
+                  </div>
+                  <div class="content" id="panel41">
+                    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+                  </div>
+                </div>
+              </div>
+                
+              <hr>
+                
+              <div class="columns">
+                <h2 data-magellan-destination="tab-switcher">Tabs switcher</h2><a name="tab-switcher"></a>
+                    <a class="tab-content-switcher" data-hide-and-seek="ridici-funkce">Akademická a řídící funkce</a>
+                    <div id="ridici-funkce" class="display-none  tab-content">
+                        <table class="fullwidth">
+                          <thead>
+                            <tr>
+                              <th colspan="2"><a>Fakulta sociálních studií</a></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td width="150">Pracovní zařazení</td>
+                              <td>proděkanka pro strategický rozvoj</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                    <a class="tab-content-switcher" data-hide-and-seek="ridici-funkce2">Akademická a řídící funkce 2</a>
+                    <div id="ridici-funkce2" class="display-none  tab-content">
+                        <table class="fullwidth">
+                          <thead>
+                            <tr>
+                              <th colspan="2"><a>Fakulta sociálních studií</a></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td width="150">Pracovní zařazení</td>
+                              <td>proděkanka pro strategický rozvoj</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+              </div>
+                
+              <hr>
+                
+              <div class="medium-3 columns">
+                <h2 data-magellan-destination="different">Tooltips</h2><a name="different"></a>
+                <span data-tooltip aria-haspopup="true" class="has-tip tip-top" title="Tooltips are awesome, you should totally use them!">toolip top</span> | 
+                <span data-tooltip aria-haspopup="true" class="has-tip tip-bottom" title="Tooltips are awesome, you should totally use them!">toolip bottom</span> | 
+                <span data-tooltip aria-haspopup="true" class="has-tip tip-left" title="Tooltips are awesome, you should totally use them!">toolip left</span> | 
+                <span data-tooltip aria-haspopup="true" class="has-tip tip-right" title="Tooltips are awesome, you should totally use them!">toolip right</span>
+                <hr>
+                <span data-tooltip aria-haspopup="true" class="has-tip tip-top radius" title="Tooltips are awesome, you should totally use them!">toolip top radius</span> | 
+                <span data-tooltip aria-haspopup="true" class="has-tip tip-bottom round" title="Tooltips are awesome, you should totally use them!">toolip bottom round</span> | 
+                <span data-tooltip aria-haspopup="true" class="has-tip tip-left radius" title="Tooltips are awesome, you should totally use them!">toolip left radius</span> | 
+                <span data-tooltip aria-haspopup="true" class="has-tip tip-right round" title="Tooltips are awesome, you should totally use them!">toolip right round</span>
+              </div>
+
+              <div class="medium-3 columns">
+                <h2>Reveal Modal</h2>
+                <a href="#" data-reveal-id="myModal">Click Me For A Modal</a>
+                <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+                  <h2 id="modalTitle">Awesome. I have it.</h2>
+                  <p class="lead">Your couch.  It is mine.</p>
+                  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+                  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                </div>
+              </div>
+              
+              <div class="medium-6 columns">
+                <h2>Forms</h2>
+                <form>
+                  <div class="row">
+                    <div class="large-12 columns">
+                      <label>Input Label
+                        <input type="text" placeholder="large-12.columns" />
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="large-4 columns">
+                      <label>Input Label
+                        <input type="text" placeholder="large-4.columns" />
+                      </label>
+                    </div>
+                    <div class="large-4 columns">
+                      <label>Input Label
+                        <input type="text" placeholder="large-4.columns" />
+                      </label>
+                    </div>
+                    <div class="large-4 columns">
+                      <div class="row collapse">
+                        <label>Input Label</label>
+                        <div class="small-9 columns">
+                          <input type="text" placeholder="small-9.columns" />
+                        </div>
+                        <div class="small-3 columns">
+                          <span class="postfix">.com</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="large-12 columns">
+                      <label>Select Box
+                        <select>
+                          <option value="husker">Husker</option>
+                          <option value="starbuck">Starbuck</option>
+                          <option value="hotdog">Hot Dog</option>
+                          <option value="apollo">Apollo</option>
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="large-6 columns">
+                      <label>Choose Your Favorite</label>
+                      <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+                      <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+                    </div>
+                    <div class="large-6 columns">
+                      <label>Check these out</label>
+                      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="large-12 columns">
+                      <label>Textarea Label
+                        <textarea placeholder="small-12.columns"></textarea>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+            <hr>
+            
+            <div class="row">
+              <div class="columns"><h2 data-magellan-destination="panels">Panels</h2></div>
+              <a name="panels"></a>
+              <div class="columns">
+                  <div class="panel">
+                    <h2>This is a header2.</h2>
+                    <h3>This is a header3.</h3>
+                    <h4>This is a header4.</h4>
+                    <h5>This is a header5.</h5>
+                    <h6>This is a header6.</h6>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+              <div class="medium-3 columns">
+                  <div class="panel">
+                    <h3>This is a regular panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+                
+              <div class="medium-3 columns">
+                  <div class="panel callout radius">
+                    <h3>This is a callout panel - radius.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+                
+              <div class="medium-3 columns">
+                  <div class="panel primary-dark">
+                    <h3>This is a .primary-dark panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+              
+              <div class="medium-3 columns">
+                  <div class="panel primary">
+                    <h3>This is a .primary panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="medium-3 columns">
+                  <div class="panel primary-light">
+                    <h3>This is a .primary-light panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+                
+              <div class="medium-3 columns">
+                  <div class="panel primary-very-light">
+                    <h3>This is a .primary-very-light panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+                
+              <div class="medium-3 columns">
+                  <div class="panel secondary">
+                    <h3>This is a .secondary panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+              
+              <div class="medium-3 columns">
+                  <div class="panel third">
+                    <h3>This is a .third panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="medium-3 columns">
+                  <div class="panel gray-dark">
+                    <h3>This is a .gray-dark panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+                
+              <div class="medium-3 columns">
+                  <div class="panel gray">
+                    <h3>This is a .gray panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+                
+              <div class="medium-3 columns">
+                  <div class="panel gray-lighter">
+                    <h3>This is a .gray-lighter panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+                
+              <div class="medium-3 columns">
+                  <div class="panel gray-light">
+                    <h3>This is a .gray-light panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="medium-3 columns">
+                  <div class="panel gray-very-light">
+                    <h3>This is a .gray-very-light panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+                
+              <div class="medium-3 columns">
+                  <div class="panel white">
+                    <h3>This is a .white panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+            
+              <div class="medium-3 columns">
+                  <div class="panel red">
+                    <h3>This is a .red panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+                
+              <div class="medium-3 columns">
+                  <div class="panel orange">
+                    <h3>This is an .orange panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="medium-3 columns">
+                  <div class="panel yellow">
+                    <h3>This is a .yellow panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+              <div class="medium-3 columns">
+                  <div class="panel green">
+                    <h3>This is a .green panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+                
+              <div class="medium-3 columns">
+                  <div class="panel green2">
+                    <h3>This is a .green2 panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+                
+              <div class="medium-3 columns">
+                  <div class="panel blue">
+                    <h3>This is a .blue panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="medium-3 columns">
+                  <div class="panel blue2">
+                    <h3>This is a .blue2 panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+                
+              <div class="medium-3 columns">
+                  <div class="panel purple">
+                    <h3>This is a .purple panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+                
+              <div class="medium-3 columns end">
+                  <div class="panel purple2">
+                    <h3>This is a .purple2 panel.</h3>
+                    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                  </div>
+              </div>
+            </div>
+            
+            <hr>
+            
+            <div class="row">
+              <div class="medium-4 columns">
+                <a name="media"></a>
+                <h2 data-magellan-destination="media">Flex Video</h2>
+                <div class="flex-video widescreen vimeo">
+                  <iframe src="http://player.vimeo.com/video/60122989" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                </div>
+              </div>
+              <div class="medium-4 columns">
+                <h2>Clearing Lightbox</h2>
+                <ul class="clearing-thumbs small-block-grid-3" data-clearing>
+                  <li><a href="res/images/space.jpg"><img src="res/images/space-th-sm.jpg"></a></li>
+                  <li><a href="res/images/space.jpg"><img src="res/images/space-th-sm.jpg"></a></li>
+                  <li><a href="res/images/space.jpg"><img src="res/images/space-th-sm.jpg"></a></li>
+                </ul>
+              </div>
+              <div class="medium-4 columns">
+                <h2>Orbit</h2>
+                <div class="carousel-panel vertical-orbit">
+                  <ul class="example-orbit" data-orbit data-options="pause_on_hover:true; ">
+                      <li>
+                        <img src="res/images/carousel/logos/mit.png" alt="slide 1" />
+                        <div class="orbit-caption">
+                          <h3>Massachusetts Institute of&nbsp;Technology</h3>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis quam vel ex bibendum lacinia in at lectus. Sed vel sapien augue.
+                        </div>
+                      </li>
+                      <li class="active">
+                        <img src="res/images/carousel/logos/goethe.png" alt="slide 2" />
+                        <div class="orbit-caption">
+                          <h3>Goethe Institut</h3>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis quam vel ex bibendum lacinia in at lectus. Sed vel sapien augue.
+                        </div>
+                      </li>
+                      <li>
+                        <img src="res/images/carousel/logos/stanford.png" alt="slide 3" />
+                        <div class="orbit-caption">
+                          <h3>Stanford University</h3>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis quam vel ex bibendum lacinia in at lectus. Sed vel sapien augue.
+                        </div>
+                      </li>
+                      <li>
+                        <div class="slide-content">
+                          <h3>Headline 1 H3 tag</h3>
+                          <h4>Pure Text slide</h4>
+                        </div>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+	    </div>
+	</div>
+    
+  <div class="row-wide  footer-upper">
+      <div class="row">
+        <div class="large-3  medium-6  columns  show-for-large-up">
+          <ul>
+            <li><a>Úvodní strana</a></li>
+            <li><a>Zájemci o studium</a></li>
+            <li><a>Studium</a></li>
+            <li><a>Věda a výzkum</a></li>
+            <li><a>Zahraniční spolupráce</a></li>
+            <li><a>Pro média</a></li>
+          </ul>
+        </div>
+        <div class="large-3  medium-6  columns  show-for-large-up">
+          <ul>
+            <li><a>Úřední deska</a></li>
+            <li><a>Harmonogram semestru</a></li>
+            <li><a>Dokumenty ke stažení</a></li>
+            <li><a>Mobilita studentů</a></li>
+            <li><a>Stipendijní programy</a></li>
+            <li><a>Mapy pracovišť</a></li>
+          </ul>
+        </div>
+        <div class="large-3  medium-6  columns">
+          <div class="panel  radius  contact-panel">
+            <div class="logo footer-logo">&nbsp;</div>
+            <h2>Kontakt</h2>
+            <p>	
+              Masarykova univerzita<br />
+              Ústav<br />
+              Ulice XX/X<br />
+              XXX XX&nbsp;&bull;&nbsp;Brno<br />
+              Česká republika<br />
+            </p>
+          </div>
+        </div>
+        <div class="large-3  medium-6  columns">
+          <div class="panel  footer-small  radius  social-networks-footer">
+            <ul>
+              <li class="social-icon-footer"><a class="facebook" title="facebook"><i class="fa  fa-facebook"></i></a></li><li class="social-icon-footer"><a class="twitter" href="#" title="Title"><i class="fa  fa-twitter"></i></a></li><li class="social-icon-footer"><a class="google" href="#" title="Title"><i class="fa  fa-google-plus"></i></a></li><li class="social-icon-footer"><a class="youtube" href="#" title="Title"><i class="fa  fa-youtube"></i></a></li><li class="social-icon-footer"><a class="instagram" href="#" title="Title"><i class="fa  fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="panel  radius  footer-small">
+            <p>	
+              URL: <a href="#">http://www.xxxxx.cz/</a>
+            </p>
+          </div>
+          <div class="panel  radius  footer-small">
+            <p>	
+              Telefon: (+420) XXX XX XXXX
+            </p>
+          </div>
+        </div>
+      </div>
+	</div>
+	<div class="row-wide  footer-lower">
+      <div class="row">
+        <div class="large-6  columns large-push-6">
+          <img src="images/uvt_logotyp_barva.svg" class="logo hide-for-small-only" />
+          <p class="text-left">
+            Webová prezentace Masarykovy univerzity je ve správě Ústavu výpočetní techniky MU
+          </p>
+        </div>
+        <div class="large-6  columns large-pull-6">
+          <p>&copy;&ensp;2016 <a>Masarykova univerzita</a>&ensp;|&ensp;<a>Mapa stránek</a>&ensp;|&ensp;<a>Správce stránky</a>&ensp;|&ensp;<a>Kontakty</a></p>
+        </div>
+      </div>
+	</div>
+
+    <script src="../uniweb-v1/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../uniweb-v1/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../uniweb-v1/js/foundation.mainbar.min.js"></script>
+    <script src="../uniweb-v1/js/app.js"></script>
+    <script src="../uniweb-v1/js/wc-element-query.js"></script>
+    <script>
+    // počká až je dokument ready
+      $(document).ready(function(){  
+        
+        var senseSpeed = 5;
+        var previousScroll = 0;
+        $(window).scroll(function(){
+            
+          if( $("#prim-top-bar-cont").hasClass("fixed") && $("#sec-top-bar-cont").hasClass("fixed") ) {
+            $("#prim-top-bar").addClass("hide-dropdown");
+          } else {
+            $("#prim-top-bar").removeClass("hide-dropdown");
+          }
+                
+          var scroller = $(this).scrollTop();
+                
+          if( $('#prim-top-bar-cont').hasClass("fixed") && $('#sec-top-bar-cont').hasClass("fixed") ){
+            if (scroller-senseSpeed > previousScroll) {
+              $('#prim-top-bar-cont').css( "top", -$("#prim-top-bar-cont").outerHeight(true)-4 );
+              $('#sec-top-bar-cont').css( "top", 0 );
+            } else if (scroller+senseSpeed < previousScroll) {
+              $('#prim-top-bar-cont').css( "top", 0 );
+              $('#sec-top-bar-cont').css( "top", $("#prim-top-bar-cont").outerHeight(true) );
+            }
+          }
+            
+          previousScroll = scroller;
+        });
+            
+        $('.tab-content-switcher').click( function() {
+          $(this).toggleClass('active');
+          var target_element = $('#'+$(this).attr('data-hide-and-seek'));
+          if(target_element.is(':hidden')) {
+            target_element.show();
+          }
+          else {
+            target_element.hide();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

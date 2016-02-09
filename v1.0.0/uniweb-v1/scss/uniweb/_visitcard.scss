@@ -1,0 +1,103 @@
+@import "../core/mixins";
+
+// h. Visit Card
+
+.visitcard {
+  @include panel($bg:transparent, $padding: 11px);
+  border: none;
+    
+  &.white {
+    @include panel($bg: $white, $padding: 10px);
+  }
+    
+  &, &.white {
+    margin-bottom: $column-gutter * 2;
+      
+    .th {
+      background: $white;
+      border: darken($body-bg, 20%) 1px solid;
+      display: block;
+      height: 190px;
+      float: left;
+      margin: 0 $column-gutter 0 0;
+      overflow: hidden;
+      position: relative;
+      width: 159px;
+        
+      img {
+        border: 5px solid $white;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        @include translate(0, -50%);
+      }
+    }
+
+    h2, h3 {
+      color: $body-font-color;
+      margin: rem-calc(5 0 0 0);
+    }
+
+    .uco {
+      color: $body-font-color;
+      font-size: 0.8rem;
+      margin: 0;
+    }
+
+    table {
+      border: 0;
+      margin-top: $column-gutter / 2;
+
+      tr {
+        background: none;
+
+      td {
+        border: 0;
+        font-size: 0.9rem;
+        padding: rem-calc(2 10);
+          
+          &:first-child {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    
+      
+    &.eq-small {
+      h2 {
+        clear: both;
+        font-size: $h2-font-size - $h2-font-reduction * 2;
+        font-weight: $font-weight-bold;
+      }  
+        
+      .th {
+        margin-bottom: $column-gutter;
+      }
+        
+      td {
+        font-size: 0.8rem;
+      }
+    }
+      
+    &.eq-medium {
+      h2 {
+        clear: both;
+        font-size: $h2-font-size - $h2-font-reduction * 2;
+        font-weight: $font-weight-bold;
+      }  
+        
+      .th {
+        float: none;
+        margin-bottom: $column-gutter;
+      }
+    }
+      
+    &.eq-large {
+      h2 {
+        font-size: $h2-font-size - $h2-font-reduction;
+      }  
+    }
+  }
+}

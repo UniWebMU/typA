@@ -1,0 +1,191 @@
+@import "../core/mixins";
+
+// Barvy pro gradient v pozadí
+$topheader-colorstop-1: scale-color($primary-color, $lightness: -20%) !default;     // nahoře nejtmavší barva
+$topheader-colorstop-2: $primary-color !default;                                    // středová barva, 10px od horního okraje
+$topheader-colorstop-3: $primary-color !default;                                    // barva největší plochy, dolní barva
+
+$topheader-bg-solid: $topheader-colorstop-3 !default; // jednobarevné pozadí, pozadí za obrázkem a texturou
+
+$logo-header: true !default;
+$logo-header-img: "../images/logo-uniweb-white.svg" !default;
+$logo-header-height: rem-calc(52) !default;
+$logo-header-width: rem-calc(52) !default;
+$logo-header-height-med: rem-calc(52) !default;
+$logo-header-width-med: rem-calc(52) !default;
+$logo-header-top: rem-calc(44) !default;
+
+$additional-menu-correction: true !default;  // true | false
+$additional-menu-after-correction-margin: rem-calc(63) !default;
+$additional-menu-text-size: rem-calc(12) !default;
+$additional-menu-icon-size: rem-calc(16) !default;
+$additional-menu-margin: 0.5rem !default;
+$additional-menu-anchor-color: $white !default;
+$additional-menu-anchor-color-hover: $primary-light-color !default;
+
+// Settings pry typy hlavičky
+$topheader-type: default !default; // Možnosti: default | solid | texture | image;
+/*
+Default – gradient – nastavený přes celou šířku pouze
+Solid – jednobarevné pozadí – nastavený přes celou šířku pouze
+Texture – textura – nastavený přes celou šířku pouze
+Image – obrázek na pozadí – upravují ho další nastavení níže
+*/
+
+$topheader-texture-src: "../res/images/texture.png" !default; //zdroj textury
+$topheader-texture-repeat: repeat !default; // opakování textury dle zdroje, možnosti: repeat, repeat-x, repeat-y
+$topheader-texture-position: left bottom !default; // pozice textury: horizontální vertikální směr
+
+$topheader-image-src: "../res/images/header-img.png" !default; //zdroj obrázku
+$topheader-image-size: part !default; // Possibilities: full | part // Full = vyplnění řádku obrázkem, Part == přizpůsobení obrázku dle výšky
+$topheader-image-position: right center !default; // pozice obrázku v horizontální a vertikálním směru
+
+/*
+$topheader-image-position možnosti:
+for Full Image Size: top | center | bottom;
+for Part Image Size: horizontal vertical; 
+    horizontal: left | center | right;
+    vertical: top | center | bottom; 
+*/
+
+// Kombinace určuje první vrstvu pozadí a může být pouze default nebo jednobarevné nebo s texturou
+// Nastavuje i šířka použití
+$topheader-combination-row-wide: false !default; // Možnosti: true | false; 
+$topheader-combination-type: default !default; // Možnosti: default | solid | texture;
+
+
+
+@mixin topheader-base {
+  a {
+    @include transition(color 0.2s ease);
+    text-decoration: none !important;
+  }
+    
+  
+  .logo-top-header {
+    background-size: contain;
+    height: $logo-header-height;
+    //margin-left: $column-gutter / 2;
+    position: absolute;
+    width: $logo-header-width;
+    //left: 0;
+    top: $logo-header-top;
+      
+    @media #{$medium-up} {
+      height: $logo-header-height-med;
+      width: $logo-header-width-med;
+    }
+    
+    @if $fac-tag-mini == true {
+      @if $logo-header == true {
+        background: transparent url($logo-header-img) no-repeat left top;
+        display: block;
+        visibility: visible;
+        } @else if $logo-header == false {
+          background: none;
+          display: none;
+          visibility: hidden;
+        }
+    }
+    
+    @if $logo-header-position == left {
+      left: 0;
+      margin-left: $column-gutter / 2;
+    } @else if $logo-header-position == center {
+        left: 50%;
+        @include translate(-50%, 0);
+    }
+  }
+
+  .additional-menu {
+    display: inline-block;
+    float: right;
+    text-align: right;
+    margin-top: rem-calc(20);
+
+    a {
+      color: $additional-menu-anchor-color;
+      font-size: $additional-menu-text-size;
+      letter-spacing: 0.115em;
+      margin-left: $additional-menu-margin;
+      text-transform: uppercase;
+        
+      &:hover, &:focus {
+        color: $additional-menu-anchor-color-hover;
+      }
+        
+      .fa {
+        font-size: $additional-menu-icon-size;
+      }
+    }
+  }
+}
+
+@mixin topheader-default {
+  background: $topheader-colorstop-3; /* Old browsers */
+  background: -moz-linear-gradient(top,  $topheader-colorstop-1 0%, $topheader-colorstop-2 10px, $topheader-colorstop-3 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$topheader-colorstop-1), color-stop(10px,$topheader-colorstop-2), color-stop(100%,$topheader-colorstop-3)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $topheader-colorstop-1 0%,$topheader-colorstop-2 10px,$topheader-colorstop-3 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $topheader-colorstop-1 0%,$topheader-colorstop-2 10px,$topheader-colorstop-3 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $topheader-colorstop-1 0%,$topheader-colorstop-2 10px,$topheader-colorstop-3 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $topheader-colorstop-1 0%,$topheader-colorstop-2 10px,$topheader-colorstop-3 100%); /* W3C */
+}
+
+@mixin topheader-solid {
+  background: $topheader-bg-solid;
+}
+
+@mixin topheader-texture {
+  background: $topheader-bg-solid url($topheader-texture-src) $topheader-texture-repeat $topheader-texture-position;
+}
+
+@mixin topheader-image {
+    
+  @if $topheader-image-size == full {
+    background: $topheader-bg-solid url($topheader-image-src) no-repeat $topheader-image-position;
+    background-size: cover;
+  } @else if $topheader-image-size == part {
+      background: none; 
+      
+      @media #{$medium-up} {
+        background: $topheader-bg-solid url($topheader-image-src) no-repeat $topheader-image-position;
+        background-size: contain;
+      }
+    }
+}
+
+@include exports("top-header") {
+  .top-header {
+      
+    @include topheader-base;
+      
+    @if $topheader-type == default {
+      &.row-wide { @include topheader-default; }
+
+    } @else if $topheader-type == solid {
+      &.row-wide { @include topheader-solid; }
+
+    } @else if $topheader-type == texture {
+      &.row-wide { @include topheader-texture; }
+
+    } @else if $topheader-type == image {
+      @if $topheader-image-wide == true {
+        &.row-wide { @include topheader-image; }
+
+      } @else if $topheader-image-wide == false {
+        & .identity-row { @include topheader-image; }
+      }
+    }
+
+    @if $topheader-combination-row-wide == true {
+      @if $topheader-combination-type == default {
+        &.row-wide { 
+          @include topheader-default; 
+         .identity-row { background-color: transparent !important; }
+        }
+      } @else if $topheader-combination-type == solid {
+        &.row-wide { @include topheader-solid; }
+      }
+    }
+  }
+}

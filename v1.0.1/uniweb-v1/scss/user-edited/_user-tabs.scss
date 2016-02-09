@@ -1,0 +1,120 @@
+// Tabs
+
+$tab-border-color: $gray-light-color !default;
+$tab-border-hover-color: $tabs-navigation-hover-bg-color !default;
+$tab-border-active-color: scale-color($gray-light-color, $lightness: -30%) !default;
+$tab-text-color-hover: $white !default;
+$tab-text-color-active-hover: $white !default;
+
+dl, ul {
+  &.tabs {
+    border-bottom: 1px solid $tab-border-active-color;
+    dd, li {
+     &.tab-title {
+      margin: rem-calc(0 5 0 0);
+        
+      &:first-child {
+        margin-left: rem-calc(5);
+      }
+      
+      a {
+        @include transition(none);
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: $font-weight-bold;
+        border-top: 1px solid $tab-border-color;
+        border-right: 1px solid $tab-border-color;
+        border-left: 1px solid $tab-border-color;
+        margin-top: rem-calc(5);
+        padding: rem-calc(5 10);
+          
+        &:hover {
+          color: $tab-text-color-hover;
+          border-top: 1px solid $tab-border-hover-color;
+          border-right: 1px solid $tab-border-hover-color;
+          border-left: 1px solid $tab-border-hover-color;
+        }
+          
+        @media #{$large-up} {
+          padding: rem-calc(5 15);
+        }
+      }
+        
+      &.active {
+        a {
+          border-top: 1px solid $tab-border-active-color;
+          border-right: 1px solid $tab-border-active-color;
+          border-left: 1px solid $tab-border-active-color;
+          border-bottom: 1px solid $gray-very-light-color;
+          margin-top: 0;
+          margin-bottom: -1px;
+          padding: rem-calc(10 10 5 10);
+          
+          &:hover{
+            color: $tab-text-color-active-hover;
+            border-top: 1px solid $tab-border-active-color;
+            border-right: 1px solid $tab-border-active-color;
+            border-left: 1px solid $tab-border-active-color;
+          }
+            
+          @media #{$large-up} {
+            padding: rem-calc(10 15 5 15);
+          }
+        }
+       }
+      }
+    }
+  }
+}
+
+
+// Tab Switcher
+
+$tab-content-switcher-bg-color: rgb(127, 127, 127) !default;
+$tab-content-switcher-bg-color-hover: rgb(127, 127, 127) !default;
+$tab-content-switcher-color: $white !default;
+$tab-content-switcher-color-hover: $white !default;
+$tab-content-switcher-active-color: $white !default;
+
+.tabs-content {
+  table {
+    width: 100%;
+  }
+}
+
+.tab-content {
+  @include transition(all 0.3s ease); 
+}
+
+.tab-content-switcher {
+  background: $tab-content-switcher-bg-color url("../images/icons/arrow-tab-content-switcher.svg") no-repeat;
+  background-position: 0 -24px;
+  background-size: 24px auto;
+  display: block;
+  height: rem-calc(24);
+  color: $tab-content-switcher-color;
+  font-family: $font-family-sans-narrow;
+  font-size: rem-calc(15);
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.1em;
+  line-height: rem-calc(24);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: rem-calc(20 0);
+  padding: rem-calc(0 20 0 23);
+                   
+  &:hover {
+    background-color: $tab-content-switcher-bg-color-hover;
+    color: $tab-content-switcher-color-hover;
+    text-decoration: none;
+  }
+    
+  &.active {
+    background-color: $tab-content-switcher-bg-color;
+    background-position: 0 0;
+    color: $tab-content-switcher-active-color;
+    &:hover {
+      background-color: $tab-content-switcher-bg-color;
+    }
+  }
+}

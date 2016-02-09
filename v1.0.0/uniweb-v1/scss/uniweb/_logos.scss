@@ -1,0 +1,72 @@
+@import "../core/mixins";
+
+$title-logo-height-sml: rem-calc(53) !default;
+$title-logo-width-sml: rem-calc(53) !default;
+$title-logo-height-med: rem-calc(90) !default;
+$title-logo-width-med: rem-calc(90) !default;
+$title-logo-height-lrg: rem-calc(90) !default;
+
+$logo-faculty-width-sml: rem-calc(70) !default;
+$logo-faculty-height-sml: rem-calc(70) !default;
+$logo-faculty-width-med: rem-calc(90) !default;
+$logo-faculty-height-med: rem-calc(90) !default;
+
+@mixin logo-base {
+  position: relative;
+  background-size: contain; 
+  display: block;
+  float: left;
+  height: $title-logo-height-sml;
+  width: $title-logo-width-sml;
+  margin: rem-calc(18 0 16 14);
+  padding: rem-calc(6);
+  z-index: 2000;
+  
+  @media #{$medium-only} { 
+    height: $title-logo-height-med;
+    width: $title-logo-width-med;
+  }
+
+  @media #{$large-up} {
+    height: $title-logo-height-lrg;
+    width: 90% !important;
+  }
+}
+
+@mixin logo-bg($bg) {
+  background: transparent url($bg) no-repeat top center;
+}
+
+.logo-faculty {
+  height: $logo-faculty-height-sml;
+  width: $logo-faculty-width-sml;
+  display: inline-block;
+  margin: rem-calc(0 5 10 0);
+  &:first-child { margin-left: rem-calc(20); }
+    
+  @media #{$medium-only} {
+    &:first-child { margin-left: rem-calc(0); }
+  }
+
+  @media #{$large-up} {
+    height: $logo-faculty-height-med;
+    width: $logo-faculty-width-med;
+    margin: rem-calc(0 5 20 0);
+    &:first-child { margin-left: rem-calc(-5); }
+  }
+}
+
+.logo-prehled {
+  margin: 1em;
+  max-height: 80px;
+
+  @media #{$large-up} {
+    margin: 0 1em;
+  }
+}
+
+@include exports("logo") {
+  .logo {
+    @include logo-base;
+  }
+}

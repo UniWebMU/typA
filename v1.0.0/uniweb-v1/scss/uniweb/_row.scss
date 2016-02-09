@@ -1,0 +1,50 @@
+@import "../core/mixins";
+
+$topbar-row-bg-color: true !default;
+
+.row-wide {
+  width: 100%;
+  padding: 0;
+}
+
+.row {
+  &.margin-around {
+    margin: rem-calc(25) auto !important;
+  }
+    
+  @media #{$small-only} {
+    &.small-wide {
+      .columns, .column {
+        padding: 0;
+      }
+    }
+  }
+
+  @media #{$medium-only} {
+    &.medium-wide {
+      .columns, .column {
+        padding: 0;
+      }
+    }
+  }
+
+  @media #{$large-only} {
+    &.large-wide {
+      .columns, .column {
+        padding: 0;
+      }
+    }
+  }
+
+  
+}
+
+.row, .row-wide {
+  &.primary { background: $primary-color; }
+  &.primary-darker { background: $primary-darker-color; }
+  &.primary-dark { background: $primary-dark-color; }
+  &.gray { background: $gray-color; }
+  &.gray-transparent { background: $gray-transparent-color; }
+  &.secondary { background: $secondary-color; }
+  &.third { background: $third-color; }
+}

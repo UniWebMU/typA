@@ -1,0 +1,809 @@
+// a. Base
+// b. Grid
+// c. Color Settings
+// d. Global
+// e. Media Query Ranges
+// f. Typography
+
+// Uniweb Identity
+// Uniweb Above Header 
+// Uniweb Top Header 
+// Uniweb Searching
+// Top Bar
+// Uniweb Main Bar
+// Uniweb Simple Navigation
+// Uniweb Layout Elements
+// Uniweb Modules
+// Uniweb Simple Modules
+// Uniweb Icotiles
+// Uniweb Editorial
+// Uniweb Events
+// Uniweb Publication
+// Uniweb Tab Switcher
+// Uniweb Footer
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// a. Base
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// This is the default html and body font-size for the base rem value.
+// $rem-base: 16px;
+
+// Allows the use of rem-calc() or lower-bound() in your settings
+@import "../../uniweb-v1/bower_components/foundation/scss/foundation/functions";
+@import url('http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic&subset=latin,latin-ext');
+
+// The default font-size is set to 100% of the browser style sheet (usually 16px)
+// for compatibility with browser-based text zoom or user-set defaults.
+
+// Since the typical default browser font-size is 16px, that makes the calculation for grid size.
+// If you want your base font-size to be different and not have it affect the grid breakpoints,
+// set $rem-base to $base-font-size and make sure $base-font-size is a px value.
+// $base-font-size: 100%;
+
+// The $base-font-size is 100% while $base-line-height is 150%
+// $base-line-height: 150%;
+
+// We use this to control whether or not CSS classes come through in the gem files.
+$include-html-classes: true;
+// $include-print-styles: true;
+$include-html-global-classes: $include-html-classes;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// b. Grid 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $include-html-grid-classes: $include-html-classes;
+// $include-xl-html-grid-classes: false;
+
+ $row-width: rem-calc(1190);
+// $total-columns: 12;
+ $column-gutter: rem-calc(15);
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// c. Color Setting
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ $white       : #FFFFFF;
+ $ghost       : #FAFAFA;
+ $snow        : #F9F9F9;
+ $vapor       : #F6F6F6;
+ $white-smoke : #F5F5F5;
+ $silver      : #EFEFEF; 
+ $smoke       : #EEEEEE;
+ $gainsboro   : #DDDDDD;
+ $iron        : #CCCCCC;
+ $base        : #AAAAAA;
+ $aluminum    : #999999;
+ $jumbo       : #888888;
+ $monsoon     : #777777;
+ $steel       : #666666;
+ $charcoal    : #555555;
+ $tuatara     : #444444;
+ $oil         : #333333;
+ $jet         : #222222;
+ $black       : #000000;
+
+// Základní barvy jednotlivých fakult
+ 
+ $mu-color:   rgb(0, 39, 118);   // modrá MU
+ $law-color:  rgb(128, 55, 155); // Právnická fakulta MU
+ $med-color:  rgb(249, 70, 28);  // Lékařská fakulta MU
+ $sci-color:  rgb(0, 175, 63);   // Přírodovědecká fakulta MU
+ $phil-color: rgb(0, 161, 222);  // Filozofická fakulta MU
+ $ped-color:  rgb(255, 160, 47); // Pedagogická fakulta MU
+ $econ-color: rgb(120, 35, 39);  // Ekonomická fakulta MU
+ $fi-color:   rgb(252, 212, 80); // Fakulta informatiky MU
+ $fss-color:  rgb(0, 123, 105);  // Fakulta sociálních studií MU
+ $fsps-color: rgb(0, 154, 166);  // Fakulta sportovních studií MU
+ 
+// We use these as default colors throughout
+
+ $primary-color:            #e43328;                                        // modrá MU pro pozadí bloků apod. 
+ $primary-darker-color:     scale-color($primary-color, $lightness: -15%);  // tmavší modrá
+ $primary-dark-color:       scale-color($primary-color, $lightness: -30%);  // tmavá modrá
+ $primary-light-color:      scale-color($primary-color, $lightness: 60%);   // světlá barva
+ $primary-very-light-color: scale-color($primary-color, $lightness: 85%);   // velmi světlá barva
+ $primary-events-color:     $primary-color;                                 // barva na datumy u Events nebo pozadí ikon sociálních sítí
+ 
+ $secondary-color: rgb(245, 165, 0);  //orange 1 z manuálu MU
+ $third-color:     rgb(240, 120, 0);   //orange 2 z manuálu MU
+
+// Odstíny šedých speciálních (nad rámec výše definovaných)
+
+ $gray-color:                rgb(71, 71, 71);          
+ $gray-transparent-color:    rgba($gray-color, 0.85);  //tmavší šedá s průhledností pro pozadí nadpisů v blocích a modulech
+ $gray-dark-color:           rgb(42, 42, 42);
+ $gray-lighter-color:        rgb(112, 112, 112);
+ $gray-light-color:          rgb(188, 188, 188); 
+ $gray-very-light-color:     rgb(241, 241, 241);
+
+// Doplňková barevná škála - tzv. duha - pro tlačítka, panely, dlaždice
+
+ $firebrick-red-color:     rgb(231, 34, 39);  //rgb(194, 62, 62); 
+ $alloy-orange-color:      rgb(212, 115, 36);
+ $goldenrod-yellow-color:  rgb(209, 158, 13);
+ $avocado-green-color:     rgb(81, 148, 63);
+ $myrtle-green-color:      rgb(27, 143, 127);
+ $blue-color:              rgb(0, 151, 212);
+ $darkblue-color:          rgb(35, 104, 173);
+ $royal-purple-color:      rgb(125, 108, 166);
+ $pearly-purple-color:     rgb(183, 104, 162); 
+
+// Social networks colors - http://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
+
+ $facebook-color:  rgb(59, 89, 152); //http://designpieces.com/2012/12/facebook-colour-palette/
+ $twitter-color:   rgb(0, 172, 237); //http://designpieces.com/2012/12/twitter-colour-palette/
+ $google-color:    rgb(221, 75, 57);
+ $youtube-color:   rgb(187, 0, 0);
+ $linkedin-color:  rgb(0, 123, 182);
+ $instagram-color: rgb(81, 127, 164);
+ $pinterest-color: rgb(203, 32, 39);
+ $flickr-color:    rgb(255, 0, 132);
+ $tumblr-color:    rgb(0, 80, 109);
+ $vimeo-color:     rgb(170, 212, 80);
+
+// Barvy alertů - ponechány default z Foundation, lze nadefinovat vlastní - slouží k obarvení hlášek
+
+// $alert-color: #f04124;
+// $success-color: #43AC6A;
+// $warning-color: #f08a24;
+// $info-color: #a0d3e8;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// d. Global 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// We use these to define default font stacks
+ $font-family-sans-serif: "PT Sans", sans-serif;
+ $font-family-serif: "PT Serif", serif;
+ $font-family-sans-narrow: "PT Sans Narrow", sans-serif;
+// $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
+// We use these to define default font weights
+ $font-weight-normal: 400 !default;
+ $font-weight-bold: 700 !default;
+
+// We use these to control various global styles
+ $body-bg: $white;
+ $body-font-color: $jet;
+ $body-font-family: $font-family-sans-serif;
+ $body-font-weight: $font-weight-normal;
+// $body-font-style: normal;
+
+// We use this to control font-smoothing
+// $font-smoothing: antialiased;
+
+// We use these to control text direction settings
+// $text-direction: ltr;
+// $opposite-direction: right;
+// $default-float: left;
+// $last-child-float: $opposite-direction;
+
+// We use these to make sure border radius matches unless we want it different.
+ $global-radius: 5px;
+// $global-rounded: 1000px;
+
+// We use these to control inset shadow shiny edges and depressions.
+// $shiny-edge-size: 0 1px 0;
+// $shiny-edge-color: rgba($white, .5);
+// $shiny-edge-active-color: rgba($black, .2);
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// e. Media Query Ranges
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ $small-breakpoint:  em-calc(590);
+ $medium-breakpoint: em-calc(800);
+ $large-breakpoint:  em-calc(1440);
+ $xlarge-breakpoint: em-calc(1920);
+
+// $small-range:   (0, $small-breakpoint);
+// $medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint);
+// $large-range:   ($medium-breakpoint + em-calc(1), $large-breakpoint);
+// $xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint);
+// $xxlarge-range: ($xlarge-breakpoint + em-calc(1), em-calc(99999999));
+
+// $screen: "only screen";
+
+// $landscape: "#{$screen} and (orientation: landscape)";
+// $portrait: "#{$screen} and (orientation: portrait)";
+
+// $small-up: $screen;
+// $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+
+// $medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+// $medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+
+// $large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+// $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+
+// $xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+// $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+
+// $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
+// $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+// $retina: (
+//  "#{$screen} and (-webkit-min-device-pixel-ratio: 2)",
+//  "#{$screen} and (min--moz-device-pixel-ratio: 2)",
+//  "#{$screen} and (-o-min-device-pixel-ratio: 2/1)",
+//  "#{$screen} and (min-device-pixel-ratio: 2)",
+//  "#{$screen} and (min-resolution: 192dpi)",
+//  "#{$screen} and (min-resolution: 2dppx)"
+// );
+
+// Legacy
+// $small: $medium-up;
+// $medium: $medium-up;
+// $large: $large-up;
+
+// We use this as cursors values for enabling the option of having custom cursors in the whole site's stylesheet
+// $cursor-crosshair-value: crosshair;
+// $cursor-default-value: default;
+// $cursor-disabled-value: not-allowed;
+// $cursor-pointer-value: pointer;
+// $cursor-help-value: help;
+// $cursor-text-value: text;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// f. Typography 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $include-html-type-classes: $include-html-classes;
+
+// We use these to control header font styles
+ $header-font-family: $body-font-family;
+ $header-font-weight: $font-weight-normal;
+ $header-font-style: normal;
+ $header-font-color: $jet;
+ $header-line-height: 3rem;
+ $header-top-margin: 1.5rem;
+ $header-bottom-margin: 1.5rem;
+// $header-text-rendering: optimizeLegibility;
+
+// We use these to control header font sizes
+ $h1-font-size: rem-calc(38);
+ $h2-font-size: rem-calc(30);
+ $h3-font-size: rem-calc(24);
+ $h4-font-size: rem-calc(20);
+ $h5-font-size: rem-calc(18);
+// $h6-font-size: 1rem;
+
+// We use these to control header size reduction on small screens
+ $h1-font-reduction: rem-calc(7) !default; //30
+ $h2-font-reduction: rem-calc(6) !default; //27
+ $h3-font-reduction: rem-calc(5) !default; //22
+ $h4-font-reduction: rem-calc(5) !default; //18
+ $h5-font-reduction: rem-calc(2) !default; //16
+// $h6-font-reduction: 0 !default;
+
+// These control how subheaders are styled.
+// $subheader-line-height: 1.4;
+// $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
+// $subheader-font-weight: $font-weight-normal;
+// $subheader-top-margin: .2rem;
+// $subheader-bottom-margin: .5rem;
+
+// A general <small> styling
+// $small-font-size: 60%;
+// $small-font-color: scale-color($header-font-color, $lightness: 35%);
+
+// We use these to style paragraphs
+// $paragraph-font-family: inherit;
+// $paragraph-font-weight: $font-weight-normal;
+// $paragraph-font-size: 1rem;
+ $paragraph-line-height: 1.5rem;
+ $paragraph-margin-bottom: 1.5rem;
+// $paragraph-aside-font-size: rem-calc(14);
+// $paragraph-aside-line-height: 1.35;
+// $paragraph-aside-font-style: italic;
+// $paragraph-text-rendering: optimizeLegibility;
+
+// We use these to style <code> tags
+// $code-color: $oil;
+// $code-font-family: $font-family-monospace;
+// $code-font-weight: $font-weight-normal;
+// $code-background-color: scale-color($gray-color, $lightness: 70%);
+// $code-border-size: 1px;
+// $code-border-style: solid;
+// $code-border-color: scale-color($code-background-color, $lightness: -10%);
+// $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
+
+// We use these to style anchors
+// $anchor-text-decoration: underline; 
+ $anchor-text-decoration-hover: none;
+ $anchor-font-color: $primary-color;
+ $anchor-font-color-hover: $third-color; //scale-color($primary-color, $lightness: -14%);
+
+// We use these to style the <hr> element
+// $hr-border-width: 1px;
+// $hr-border-style: solid;
+// $hr-border-color: $gainsboro;
+// $hr-margin: rem-calc(20);
+
+// We use these to style lists
+// $list-font-family: $paragraph-font-family;
+// $list-font-size: $paragraph-font-size;
+// $list-line-height: $paragraph-line-height;
+// $list-margin-bottom: $paragraph-margin-bottom;
+// $list-style-position: outside;
+// $list-side-margin: 1.1rem;
+// $list-ordered-side-margin: 1.4rem;
+// $list-side-margin-no-bullet: 0;
+// $list-nested-margin: rem-calc(20);
+// $definition-list-header-weight: $font-weight-bold;
+// $definition-list-header-margin-bottom: .3rem;
+// $definition-list-margin-bottom: rem-calc(12);
+
+// We use these to style blockquotes
+ $blockquote-font-color: $body-font-color;
+ $blockquote-padding: rem-calc(0 20 0 20);
+ $blockquote-border: none; //1px solid $gainsboro;
+ $blockquote-cite-font-size: rem-calc(16);
+ $blockquote-cite-font-color: $gray-lighter-color;
+// $blockquote-cite-link-color: $blockquote-cite-font-color;
+
+// Acronym styles
+// $acronym-underline: 1px dotted $gainsboro;
+
+// We use these to control padding and margin
+// $microformat-padding: rem-calc(10 12);
+// $microformat-margin: rem-calc(0 0 20 0);
+
+// We use these to control the border styles
+// $microformat-border-width: 1px;
+// $microformat-border-style: solid;
+// $microformat-border-color: $gainsboro;
+
+// We use these to control full name font styles
+// $microformat-fullname-font-weight: $font-weight-bold;
+// $microformat-fullname-font-size: rem-calc(15);
+
+// We use this to control the summary font styles
+// $microformat-summary-font-weight: $font-weight-bold;
+
+// We use this to control abbr padding
+// $microformat-abbr-padding: rem-calc(0 1);
+
+// We use this to control abbr font styles
+// $microformat-abbr-font-weight: $font-weight-bold;
+// $microformat-abbr-font-decoration: none;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Identity
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $fac-tag-mini: true;                                     // True - zmenší štítek na mini, False - použije se velký štítek
+
+// $fac-tag-bg-color: $white;                                // Pozadí štítku
+// $fac-tag-logo-color: mu;                                  // Předdefinované varianty barvy znaku univerzity: mu | cerna | bila | law | med | sci | phil | ped | econ | fi | fss | fsps | user
+// $fac-tag-bg-user-image: "../res/images/CERIT-SC logo.svg";// V případě použití "user" výše, nastavte cestu na vlastní obrázek znaku MU
+// $fac-tag-width: rem-calc(52);                             // Šířka štítku
+// $fac-tag-height: rem-calc(130);                           // Výška velkého štítku, mini je na výšku lišty Above Header Bar
+
+// $fac-tag-gutter: rem-calc(20);                            // Odsazení štítku
+
+ $fac-tag-text-color: $black;                                // Pokud je název pomocí textu, barva textu
+// $fac-tag-text-color-hover: $primary-light-color;          // Barva textu při hover
+// $fac-tag-text-font-size: rem-calc(13);                    // Velikost textu
+// $fac-tag-text-top: rem-calc(63);                          // Odsazení
+// $fac-tag-text-top-medup-corr: rem-calc(-20);              // Korekce odsazení pro medium-up
+
+// $fac-tag-text-img-height: rem-calc(60);                   // Při použití textu pomocí SVG obrázku
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Above Header 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ $above-header-background: $primary-dark-color;         // Barva pozadí horní lišty
+// $above-header-color: $white;                         // Barva písma, linků
+// $above-header-color-hover: $primary-light-color;     // Barva hover
+
+// horní tmavá lišta s odkazy a jazykovou mutací - výška pro medium-up
+// $height-above-header-bar: rem-calc(30);
+
+// horní tmavá lišta - pro small pouze tenčí designová, bez obsahu
+// $height-above-header-bar-base: rem-calc(6); 
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Top Header    
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Nastavení minimální výšky je z důvodu možného natažení záhlaví v případě větších marginů.
+// $top-header-min-height-small: rem-calc(135);     // Nastavení minimální výšky pro small rozlišení
+ $top-header-min-height-med: rem-calc(290);       // Nastavení minimální výšky pro medium-up
+
+ $topheader-colorstop-1: $white;                                            // Nejtmavší barva přechodu/stínu nahoře
+ $topheader-colorstop-2: $white;                                            // Stín by měl být jen v horní části, tato barva by měla být stejná jako největší plocha
+ $topheader-colorstop-3: $white;                                            // Basic barva pozadí - největší plocha
+
+ $logo-header: true;                                        // Nekomentovat tuto hodnotu! Pokud je štítek mini a je použito vlastní logo, možnosti: false | true
+ $logo-header-img: "../res/images/CERIT-SC-logo.svg";   // Cesta na obrázek vlastního loga
+ $logo-header-position: left;                               // Nekomentovat tuto hodnotu! Pozice loga v hlavičce. Možnosti: left | center
+// $logo-header-height: rem-calc(52);                       // Výška loga
+// $logo-header-width: rem-calc(52);                        // Šířka loga
+ $logo-header-height-med: rem-calc(200);                   // Výška loga pro medium-up
+ $logo-header-width-med: rem-calc(200);                    // Výška loga pro medium-up
+ $logo-header-top: rem-calc(-50);                          // Odsazení loga
+
+// Doplňkové menu nad vyhledávačem
+// $additional-menu-correction: true;                           // true | false - posouvá vyhledávání o něco níž a vyrovnává ho na výškově
+// $additional-menu-text-size: rem-calc(12);                    // Velikost textu v doplňkovém menu
+// $additional-menu-icon-size: rem-calc(16);                    // Velikost ikony v doplňkovém menu
+// $additional-menu-margin: 0.5rem;                             // Margin kolem položek doplňkového menu
+// $additional-menu-anchor-color: $white;                       // Barva odkazu
+// $additional-menu-anchor-color-hover: $primary-light-color;   // Barva odkazu při hover
+
+// Settings of Header Types 
+
+ $topheader-type: texture;     // Možnosti: default | solid | texture | image; 
+ $topheader-image-wide: false; // Možnosti: true | false; - nastaví obrázek buď na vnitřní .row nebo na .row-wide na celou šířku
+
+ $topheader-texture-src: "../res/images/cerit_sc_zahlavi2.png";     // Cesta na texturu
+ $topheader-texture-repeat: repeat;                       // Styl opakování textury
+// $topheader-texture-position: bottom left;                // Umístění textury
+
+ $topheader-image-src: "../res/images/cerit_sc_zahlavi3.png";    // Cesta na obrázek v pozadí
+// $topheader-image-size: part;                             // Možnosti: full | part; - full vyplní obrázkem celé pozadí, part - přizpůsobí obrázek v poměru stran
+// $topheader-image-position: right center;                 // Umístění obrázku
+
+// $topheader-image-position possibilities: 
+// for Full Image Size: top | center | bottom;
+// for Part Image Size: horizontal vertical; 
+//    horizontal: left | center | right;
+//    vertical: top | center | bottom; 
+
+ $topheader-combination-row-wide: true;   // Možnosti: true | false; Zda je kombinace s pozadím širokého řádku a vnitřního řádku.
+ $topheader-combination-type: texture;    // Typ pozadí pro kombinaci. Možnosti: default | solid | texture;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Searching
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $search-type: simple;                // Typ podoby vyhledávače, možnosti: classic | simple 
+// $search-placeholder-color: $white;   // Barva placeholderu
+// $search-border-color: $white;        // Barva linky kolem input a button
+// $search-font-color: $white;          // Barva písma při psaní do input
+
+// $search-simple-background: rgba(255, 255, 255, 0); // Možnost přidat pozadí typu Simple, využitelné spíše pro průhledné, co nebude rušit - nastavení alpha čísla v závorce v rozmezí 0–1 v desetinných číslech
+
+// $search-classic-background: $white;              // Pozadí inputu při zobrazení typu Classic
+// $search-classic-btn-background: $white;          // Barva pozadí button typu Classic
+// $search-classic-btn-background-hover: $white;    // Barva pozadí button při hover typu Classic
+
+// $search-btn-icon: '../images/ico-search.svg';                // URL vlastní ikony tlačítka hledat  
+// $search-btn-icon-hover: '../images/ico-search-hover.svg';    // URL vlastní ikony tlačítka hledat při hover 
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// 34. Top Bar 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $include-html-top-bar-classes: $include-html-classes;
+
+// Background color for the top bar
+ $topbar-bg-color: $primary-color; 
+ $topbar-bg: $topbar-bg-color;
+
+// Height and margin
+ $topbar-height: rem-calc(47);
+ $topbar-margin-bottom: 0; 
+
+// Controlling the styles for the title in the top bar
+// $topbar-title-weight: $font-weight-bold;
+// $topbar-title-font-size: rem-calc(17);
+
+// Style the top bar dropdown elements
+ $topbar-dropdown-bg: $body-bg; //scale-color($primary-darker-color, $lightness: -20%);
+ $topbar-dropdown-link-color: $body-font-color;
+ $topbar-dropdown-link-bg: $topbar-dropdown-bg;
+ $topbar-dropdown-link-bg-hover: transparent;
+ $topbar-dropdown-link-weight: $font-weight-normal;
+ $topbar-dropdown-toggle-size: 4px; 
+ $topbar-dropdown-toggle-color: $secondary-color;
+ $topbar-dropdown-toggle-alpha: 1;
+
+// Set the link colors and styles for top-level nav
+ $topbar-link-color: $white; 
+ $topbar-link-color-hover: scale-color($black, $lightness: 25%);
+ $topbar-link-color-active: $primary-color;
+ $topbar-link-color-active-hover: scale-color($primary-color, $lightness: 70%);
+ $topbar-link-weight: $font-weight-bold;
+ $topbar-link-font-size: rem-calc(14);
+// $topbar-link-hover-lightness: -10%; // Darken by 10%
+ $topbar-link-bg: $topbar-bg-color;
+ $topbar-link-bg-hover: none;
+ $topbar-link-bg-color-hover: $primary-color;
+ $topbar-link-bg-active: transparent;
+ $topbar-link-bg-active-hover: transparent;
+// $topbar-link-font-family: $body-font-family;
+ $topbar-link-text-transform: none;
+ $topbar-link-padding: $topbar-height / 4;
+// $topbar-link-dropdown-padding: 20px;
+ $topbar-back-link-size: rem-calc(14);
+ $topbar-back-link-color: $primary-color;
+ $topbar-back-link-color-hover: $primary-light-color;
+
+// $topbar-button-font-size: 0.75rem;
+// $topbar-button-top: 7px;
+
+ $topbar-dropdown-label-color: $gray-dark-color;
+ $topbar-dropdown-label-text-transform: uppercase;
+ $topbar-dropdown-label-font-weight: $font-weight-bold;
+// $topbar-dropdown-label-font-size: rem-calc(10);
+ $topbar-dropdown-label-bg: $white;
+
+// Top menu icon styles 
+// $topbar-menu-link-transform: uppercase; 
+// $topbar-menu-link-font-size: rem-calc(13);
+// $topbar-menu-link-weight: $font-weight-bold;
+// $topbar-menu-link-color: $white;
+ $topbar-menu-icon-color: $white;
+ $topbar-menu-link-color-toggled: $white;
+ $topbar-menu-icon-color-toggled: $white;
+
+// Transitions and breakpoint styles
+// $topbar-transition-speed: 300ms;
+// Using rem-calc for the below breakpoint causes issues with top bar
+// $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
+// $topbar-media-query: $medium-up;
+
+// Divider Styles
+// $topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%);
+// $topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
+
+// Sticky Class
+ $topbar-sticky-class: ".sticky";
+ $topbar-arrows: false; //Set false to remove the triangle icon from the menu item
+
+
+// Vlastní proměnné
+
+ $topbar-border-around-link: false; // Zpanutí border kolem odkazů v top-bar pro plné zobrazení, možnosti: true | false
+ $topbar-border-link: 1px solid $body-bg;
+ $topbar-dropdown-border: 1px solid $gray-light-color;
+
+ $topbar-title-area-bg: $topbar-bg-color; //user class: pozadí řádku pod hamburgerem;
+
+ $topbar-parentlink-color: $primary-color; 
+ $topbar-parentlink-color-hover: $primary-light-color;
+ $topbar-parentlink-transform: uppercase;
+
+// Nastavení zarovnání položek a flex boxu
+ $topbar-link-align: justify; // varianty jsou left | center | right | justify
+// $topbar-link-text-align: center; // zarovná text položek u varianty justify - standardní možnosti: left | center | right
+
+ $topbar-link-wide-coefficient: 4;  // koeficient pro zvětšení bočních mezer při jiném než justify zarovnání
+ 
+// top-bar row obarvení
+ $topbar-row-bg-color: $topbar-bg-color;  // obarví řádek za top-bar menu barvou pozadí navigace 
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Main Bar
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Main Bar je kopií Top Baru, nastavené styly by se neměly příliš měnit. 
+
+// $include-html-main-bar-classes: $include-html-classes;
+
+// Background color for the top bar
+ $mainbar-bg-color: $body-bg;
+ $mainbar-bg: $mainbar-bg-color;
+
+// Height and margin
+ $mainbar-height: rem-calc(47);
+ $mainbar-margin-bottom: rem-calc(35); 
+
+// Controlling the styles for the title in the top bar
+// $mainbar-title-weight: $font-weight-bold;
+// $mainbar-title-font-size: rem-calc(17);
+
+// Style the top bar dropdown elements
+ $mainbar-dropdown-bg: $white;
+ $mainbar-dropdown-link-color: $anchor-font-color;
+ $mainbar-dropdown-link-bg: $white;
+ $mainbar-dropdown-link-bg-hover: $white;
+// $mainbar-dropdown-link-weight: $font-weight-normal;
+ $mainbar-dropdown-toggle-size: 4px;
+ $mainbar-dropdown-toggle-color: $secondary-color;
+ $mainbar-dropdown-toggle-alpha: 1;
+
+
+// Set the link colors and styles for top-level nav
+ $mainbar-link-color: $body-font-color;
+ $mainbar-link-color-hover: $secondary-color;
+ $mainbar-link-color-active: $secondary-color;
+ $mainbar-link-color-active-hover: scale-color($secondary-color, $lightness: -20%);
+ $mainbar-link-weight: $font-weight-normal;
+ $mainbar-link-font-size: rem-calc(14);
+// $mainbar-link-hover-lightness: -10%; // Darken by 10%
+ $mainbar-link-bg: $white; //$mainbar-bg-color;
+ $mainbar-link-bg-hover: $white;
+ $mainbar-link-bg-color-hover: $white;
+ $mainbar-link-bg-active: $mainbar-bg-color;
+ $mainbar-link-bg-active-hover: $mainbar-link-bg-color-hover;
+// $mainbar-link-font-family: $body-font-family;
+ $mainbar-link-text-transform: none;
+ $mainbar-link-padding: $mainbar-height / 4;
+ $mainbar-back-link-size: rem-calc(14);
+// $mainbar-link-dropdown-padding: 20px;
+// $mainbar-back-link-color: $mainbar-link-color;
+ $mainbar-back-link-color-hover: $gray-light-color;
+
+// $mainbar-button-font-size: 0.75rem;
+// $mainbar-button-top: 7px;
+
+ $mainbar-dropdown-label-color: $gray-dark-color;
+ $mainbar-dropdown-label-text-transform: uppercase;
+ $mainbar-dropdown-label-font-weight: $font-weight-bold;
+// $mainbar-dropdown-label-font-size: rem-calc(10);
+ $mainbar-dropdown-label-bg: $white;
+
+// Top menu icon styles 
+// $mainbar-menu-link-transform: uppercase;
+// $mainbar-menu-link-font-size: rem-calc(13);
+// $mainbar-menu-link-weight: $font-weight-bold;
+// $mainbar-menu-link-color: $white;
+ $mainbar-menu-icon-color: $body-font-color;
+ $mainbar-menu-link-color-toggled: $mainbar-menu-icon-color;
+ $mainbar-menu-icon-color-toggled: $mainbar-menu-icon-color;
+ $mainbar-menu-icon-bg: $gray-dark-color;
+ $mainbar-menu-icon-bg-hover: $primary-dark-color;
+
+// Transitions and breakpoint styles
+// $mainbar-transition-speed: 300ms;
+// Using rem-calc for the below breakpoint causes issues with top bar
+// $mainbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
+// $mainbar-media-query: $medium-up;
+
+// Divider Styles
+// $mainbar-divider-border-bottom: solid 1px  scale-color($mainbar-bg-color, $lightness: 13%);
+// $mainbar-divider-border-top: solid 1px scale-color($mainbar-bg-color, $lightness: -50%);
+
+// Sticky Class
+ $mainbar-sticky-class: ".sticky";
+ $mainbar-arrows: false; //Set false to remove the triangle icon from the menu item
+
+// Vlastní proměnné
+ $mainbar-border: 1px solid $gray-light-color;
+ $mainbar-dropdown-border: 1px solid $gray-light-color;
+
+ $mainbar-title-area-bg: $mainbar-bg-color; //user class: pozadí řádku pod hamburgerem;
+
+ $mainbar-parentlink-color-hover: $primary-light-color;
+ $mainbar-parentlink-transform: uppercase;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Simple Navigation
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $simple-nav-font-size: rem-calc(13);                         // Velikost písma linku
+// $simple-nav-link-color: $gray-dark-color;                    // Barva linku
+// $simple-nav-link-color-hover: $anchor-font-color-hover;      // Barva linku při hover
+// $simple-nav-link-color-active: $anchor-font-color-hover;     // Barva aktivního linku
+// $simple-nav-link-color-active-hover: $primary-color;         // Barva aktivního linku při hover
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Layout Elements
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Carousel Panel
+// $carousel-panel-bg: $white;                          // Barva pozadí panelu pro Carousel
+
+// You Know Panel
+// $youknow-panel-bg: $primary-color;                   // Barva pozadí panelu
+// $youknow-panel-header-color: $white;                 // Barva nadpisu
+// $youknow-panel-header-font-size: rem-calc(28);       // Velikost nadpisu
+// $youknow-panel-paragraph-color: $white;              // Barva textu
+// $youknow-panel-paragraph-font-size: rem-calc(19);    // Velikost textu v panelu You Know
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Modules
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Barva pro tmavou variantu modulu
+// $module-dark-color: $black; 
+// Barva pro svetlou variantu modulu
+// $module-inverse-color: $white; 
+// Barva textu tmaveho modulu - svetla
+// $module-dark-text-color: $module-inverse-color; 
+// Inverzní barva textu svetleho modulu
+// $module-inverse-text-color: $module-dark-color; 
+
+// $module-radius: $global-radius;  // Nastavení radiusu pro třídu .radius
+
+// Manžetka v modulu
+// $module-cuff-color: $primary-color;      // Barva manžety
+// $module-cuff-size-small: rem-calc(10);   // Velikost pro rozlišení small
+// $module-cuff-size-medium: rem-calc(15);  // Velikost pro rozlišení medium
+// $module-cuff-size-large: rem-calc(20);   // Velikost pro rozlišení large
+
+// $module-dark-background-factor: 0.5;     // Koeficient průhlednosti pro tmavé pozadí přes obrázek
+// $module-dark-header-factor: 0.6;         // Koeficient průhlednosti pro tmavé pozadí nadpisu
+
+// Text na světlém pozadí s prechodem bottom je spatne citelny, factor upravuje pruhlednost a vylepsuje citelnost
+// $module-inverse-background-factor-hover-correction: 1.5;
+// $module-inverse-background-factor: 0.5;  // Koeficient průhlednosti pro světlé pozadí přes obrázek
+// $module-inverse-header-factor: 0.8;      // Koeficient průhlednosti pro světlé pozadí nadpisu
+
+// Mapa pro vlastní třídy barevností
+// $module-color-map: false;  // Možnosti: true | false, pokud je true, odkomentovat a definovat mapu $module-colors
+
+// Mapa vlastních tříd a barev pro moduly. 
+// Co třída a barva - vlastní barva či proměnná, vzor: (vlastnitrida, vlastnibarva, barvatextu), (vlastnitrida, vlastnibarva, barvatextu)...
+// $module-colors: (barva-a, $third-color, $white), (barva-b, $secondary-color, $white), (barva-c, $firebrick-red-color, $white); 
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Simple Modules
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $simplemodule-radius: $global-radius;                        // Simple Module nastavení radiusu pro třídu .radius
+// $simplemodule-margin: $column-gutter;                        // Margin modulu
+// $simplemodule-text-color: $body-font-color;                  // Barva písma
+// $simplemodule-text-color-hover: $anchor-font-color-hover;    // Barva hover
+// $simplemodule-dark-color: $black;                            // Barva pozadí přes obrázek při hover - tmavá
+// $simplemodule-inverse-color: $white;                         // Barva pozadí přes obrázek při hover - světlá pro .inverse
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Icotiles - dlaždice 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $icotile-radius: $global-radius;             // Nastavení radiusu u dlaždic - pokud mají třídu .radius
+// $lightness-hover-factor: -15%;               // Ztmavení/zesvětlení dlaždice při hover - mínusové hodnoty pro ztmavení
+// $icotile-font-color-alt: $body-font-color;   // Tmavá barva písma pro světlé pozadí
+// $icotile-font-color: $white;                 // Světlá barva písma pro tmavé pozadí
+// $icotile-dark-color: $black;                 // Barva pro překrytí obrázku v dlaždici
+// $icotile-inverse-color: $white;              // Pro třídu .inverse - světlá barva pro překrytí obrázku v dlaždici
+// $icotile-icoimg-size: rem-calc(60);          // Velikost obrázkové ikony
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Editorial
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Editorial by měl obsahovat H1 a měl by být výše umístěný
+// Definujeme velikost nadpisu a barvu pro zvýraznění jeho části, dále pak velikost písma textu, která je větší než standardní
+// $h1-font-size: rem-calc(36);
+// $h1-strong-color: $primary-color;
+// $p-font-size: rem-calc(18);
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Events
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $events-background: $secondary-color;    // Pozadí události
+// $events-background-gone: $gray-color;    // Pro třídu .ev-gone - proběhlá událost
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Publication
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Barva rámečku modulu pro publikace
+// $publication-border-color: $primary-color;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Tab Switcher
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $tab-content-switcher-bg-color: rgb(127, 127, 127);          // Barva pozadí přepínače
+// $tab-content-switcher-bg-color-hover: rgb(127, 127, 127);    // Barva pozadí přepínače při hover
+// $tab-content-switcher-color: $white;                         // Barva písma
+// $tab-content-switcher-color-hover: $white;                   // Barva písma při hover
+// $tab-content-switcher-active-color: $white;                  // Barva písma pro aktivní link
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Uniweb Footer
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $footer-link-color:       rgb(225, 229, 233);                    // Barva odkazu v patičce
+// $footer-link-hover-color: rgb(140, 140, 140);                    // Barva hover v patičce
+// $footer-box-color:        rgb(69, 70, 74);                       // Pozadí boxu v patičce
+// $footer-bg-color:         rgb(61, 62, 66);                       // Pozadí patičky, spodní část je počítaný tmavší odstín
+
+// $footer-button-color: $gray-color;                               // Možnost použít button, který bude barevně sedět k šedým barvám patičky
+
+// $footer-logo-bg-img: "../res/images/znak-recetox-gray.svg";      // Vlastní logo v patičce, SVG by mělo být obarveno na rgb(204, 204, 204) - #cccccc
+
+// $footer-logo-width-setting: classic; // Při použití širokého loga v patičce změnit na wide, rozšíří prostor pro logo na celý box, možnosti jsou: classic | wide
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

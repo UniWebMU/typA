@@ -1,0 +1,53 @@
+// User Breadcrumbs
+
+$crumb-font-color-hover: $secondary-color !default;
+$crumb-sign-between: "../images/breadcrumbs-arrow.svg" !default;
+$crumb-sign-first: "../images/breadcrumbs-list-square.svg" !default;
+
+.breadcrumbs {
+  @include crumb-container;
+  display: inline-block;
+  background: transparent;
+  font-family: $font-family-sans-serif;
+  font-size: $crumb-font-size;
+  font-weight: $font-weight-normal;
+  letter-spacing: 0.066em;
+  margin: rem-calc(10 0 0);
+  padding: 0;
+    
+  li {
+    @include crumbs;
+    list-style-image: none;
+      
+    &::before {
+      content: "";
+      display: inline-block;
+      background: transparent url($crumb-sign-between) no-repeat center;
+      background-size: 3px;
+      height: $crumb-font-size;
+      width: $crumb-font-size;
+      top: 0;
+      vertical-align: middle;
+    }
+      
+    &:first-child {
+      &::before { 
+        background: url($crumb-sign-first) no-repeat left center;
+        background-size: rem-calc(8);
+        height: $crumb-font-size; 
+        margin-right: rem-calc(5);
+        padding-left: 0;
+        top: -1px;
+        vertical-align: middle;
+      }
+    }
+      
+    a {
+      //vertical-align: middle;
+      text-decoration: none;
+      &:hover { 
+        color: $secondary-color; 
+      }
+    }
+  }
+}

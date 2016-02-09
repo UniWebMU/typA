@@ -1,0 +1,47 @@
+// Testimonials
+
+.testimonial {
+  margin: 0 0 1em 0;
+  text-align: left;
+  
+  img {
+    border-radius: 50%;
+    float: left;
+    height: 150px;
+    margin: rem-calc(0 30 10 15);
+    width: 150px;
+            
+/*  // IE hacks
+    height: 158px\0;
+    margin: 11px 0 24px 0\0;
+    padding: 0\0;
+    width: 158px\0;*/
+  }
+    
+  .name {
+    clear: none;
+    display: block;
+    font-weight: $font-weight-bold;
+    font-style: italic;
+    margin: rem-calc(0 0 0 20);
+    width: auto;
+  }
+    
+  blockquote {
+    //text-align: left;
+  }
+    
+  &.eq-small {
+    text-align: center;
+      
+    img {
+      float: none;
+      margin: rem-calc(0 0 10 0);
+    }
+      
+    .name {
+      clear: both;
+      width: 100%;
+    }
+  }
+}
